@@ -65,6 +65,30 @@ proyecto, cópiala en `<proyecto>/.opencode/skills/`.
 Comprueba que carga pidiéndole al agente, por ejemplo, «usa la skill techo» o escribiendo
 `/techo` (en OpenCode también vale `@techo` en el mensaje).
 
+## Controlar el PC y el navegador con cualquier IA
+
+Nada de esto depende de Claude ni de código de Anthropic: son servidores MCP, y los usa cualquier agente que hable MCP (OpenCode, Kimi, Codex, Claude Code…).
+
+- **El PC (ratón, teclado, pantalla, ventanas)**: `mcp/pc-control` de este repo, con backend propio en PowerShell para Windows. Instalación en su [README](mcp/pc-control/README.md).
+- **El navegador (Chrome/Chromium)**: [Playwright MCP](https://github.com/microsoft/playwright-mcp), de Microsoft, código abierto. Abre y maneja el navegador (navegar, leer la página, clicar, escribir, capturas). En OpenCode, en `~/.config/opencode/opencode.json`:
+
+```json
+{
+  "$schema": "https://opencode.ai/config.json",
+  "mcp": {
+    "playwright": {
+      "type": "local",
+      "command": ["npx", "-y", "@playwright/mcp@latest"],
+      "enabled": true
+    }
+  }
+}
+```
+
+En Claude Code: `claude mcp add playwright -- npx -y @playwright/mcp@latest`. Hace falta Node 18+. La primera vez descarga su propio Chromium; para usar tu Chrome con tus sesiones iniciadas, mira las opciones `--browser` y `--user-data-dir` en su README.
+
+Con los dos juntos, el agente puede hacer lo mismo que un humano delante del PC: el navegador por Playwright (más fiable y rápido) y el resto del escritorio por `pc-control`.
+
 ## Skills propias
 
 | Skill | Qué hace | Cuándo se usa |
