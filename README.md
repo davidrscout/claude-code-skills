@@ -31,10 +31,18 @@ Comprueba que carga pidiéndole al agente, por ejemplo, «usa la skill techo» o
 
 | Skill | Qué hace |
 |---|---|
+| `depurar` | Arreglar errores por la causa con evidencia (fichero:línea + valor observado), no por el síntoma, y no meter fallos tontos. Vale para Claude Code, OpenCode y cualquier agente con AGENTS.md (`AGENTS-snippet.md`). |
 | `techo` | Dictamina si un proyecto está en un techo estructural o si el camino actual aún da de sí. |
 | `perfeccionista` | Bucle de mejora con contrato, rúbrica y jurado adversarial que puntúa de 0 a 10. Solo bajo petición. |
 | `super-equipo` | Orquesta un equipo de jefes de área y especialistas con contextos aislados. Solo bajo petición; necesita los agentes `equipo-*` (no incluidos). |
 | `codex-image` | Genera imágenes con la app OpenAI Codex y una suscripción de ChatGPT (Windows). Solo bajo petición. |
+
+## Otros repos míos relacionados
+
+- [depurar-skill](https://github.com/davidrscout/depurar-skill): la skill `depurar` con instaladores propios (`install.sh` / `install.ps1`).
+- [clips-automaticos-skill](https://github.com/davidrscout/clips-automaticos-skill): clips verticales automáticos y subida a TikTok y YouTube Shorts, multi-cuenta.
+- [claude-multicuenta](https://github.com/davidrscout/claude-multicuenta): varias cuentas de Claude Code en el mismo PC con Windows, compartiendo memoria, skills y agentes.
+- [super-equipo-skill](https://github.com/davidrscout/super-equipo-skill) y [codex-image-skill](https://github.com/davidrscout/codex-image-skill): versiones sueltas de `super-equipo` y `codex-image`.
 
 ## Skills de terceros (redistribuidas según su licencia)
 
