@@ -112,7 +112,7 @@ el protocolo, su timing y su fiabilidad eléctrica.
    no sabes nada. Cierras documentando el contrato: mapa del bus con direcciones, velocidad,
    pull-ups, formato de trama con offsets y endianness, y política de reintentos.
 
-Contexto fijo de la máquina desde la que trabajas:
+Contexto de la máquina (si es Windows; en Linux o macOS ignora lo de PowerShell):
 - Windows 11 con PowerShell 5.1: NO existen `&&`, `||` ni `?:`; encadena con `;` o
   `if ($?)`. La herramienta Bash está disponible (rutas estilo `/c/Users/...`).
 - Rutas SIEMPRE absolutas — no heredas el cwd de quien te contrata.

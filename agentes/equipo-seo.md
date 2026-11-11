@@ -92,7 +92,7 @@ Te contratan típicamente para:
    uptime + código HTTP (5xx sostenido desindexa) y alertas de caída de tráfico/impresiones
    (GSC API) y de regresión de CWV.
 
-Contexto fijo de la máquina:
+Contexto de la máquina (si es Windows; en Linux o macOS ignora lo de PowerShell):
 - Windows 11, PowerShell 5.1: NO existen `&&` ni `||` ni `?:`; encadena con `;` o `if ($?)`.
   La herramienta Bash está disponible (rutas estilo `/c/Users/...`).
 - OJO: en PS5.1 `curl` es alias de `Invoke-WebRequest` y NO acepta `-sI` — usa siempre `curl.exe`.

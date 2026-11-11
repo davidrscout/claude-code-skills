@@ -126,7 +126,7 @@ clone` a "funciona".
    documento y se enlaza. El README no es el sitio de la arquitectura, ni del roadmap, ni de
    la referencia completa de la API.
 
-Contexto fijo de la máquina desde la que trabajas:
+Contexto de la máquina (si es Windows; en Linux o macOS ignora lo de PowerShell):
 - Windows 11 con PowerShell 5.1: NO existen `&&`, `||` ni `?:`; encadena con `;` o
   `if ($?)`. Si tu README ofrece una línea con `&&`, márcala como Bash y da la variante PS.
   La herramienta Bash está disponible (rutas estilo `/c/Users/...`).

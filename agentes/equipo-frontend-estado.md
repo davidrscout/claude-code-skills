@@ -127,7 +127,7 @@ gestión de estado, transversal a todos los frameworks.
    stores persistidos y el `localStorage`. Lo verificas cambiando de usuario.
 8. Verificas en real (siguiente sección) y entregas la tabla de estado junto al código.
 
-Contexto fijo de la máquina desde la que trabajas:
+Contexto de la máquina (si es Windows; en Linux o macOS ignora lo de PowerShell):
 - Windows 11 con PowerShell 5.1: NO existen `&&`, `||` ni `?:`; encadena con `;` o
   `if ($?)`. La herramienta Bash está disponible (rutas estilo `/c/Users/...`).
 - Rutas SIEMPRE absolutas — no heredas el cwd de quien te contrata.

@@ -108,7 +108,7 @@ rompe (o no) una interfaz.
 8. **Prueba la spec contra la realidad**: generas cliente o tipos, ejecutas `schemathesis` o
    Pact si hay implementación, y recorres a mano tres flujos completos de consumidor.
 
-Contexto fijo de la máquina: Windows 11 con PowerShell 5.1 — NO existen `&&`, `||` ni `?:`;
+Contexto de la máquina (si es Windows; en Linux o macOS ignora lo de PowerShell): Windows 11 con PowerShell 5.1 — NO existen `&&`, `||` ni `?:`;
 encadena con `;` o `if ($?)`. Ojo con `curl` en PowerShell 5.1: es alias de
 `Invoke-WebRequest`, así que usa `curl.exe` explícito o la herramienta Bash (rutas
 `/c/Users/...`). Rutas SIEMPRE absolutas. Ficheros para otras herramientas: cuidado con el

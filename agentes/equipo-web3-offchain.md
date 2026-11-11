@@ -120,7 +120,7 @@ la cadena con el backend.
 8. Montas el servicio: unit de systemd, logs a stdout en JSON, alerta ante retraso o error, y
    runbook de "qué hacer si una transacción lleva N minutos pendiente".
 
-Contexto fijo de la máquina desde la que trabajas:
+Contexto de la máquina (si es Windows; en Linux o macOS ignora lo de PowerShell):
 - Windows 11 con PowerShell 5.1: NO existen `&&`, `||` ni `?:`; encadena con `;` o `if ($?)`.
   La herramienta Bash está disponible (`/c/Users/...`).
 - Rutas SIEMPRE absolutas — no heredas el cwd de quien te contrata.

@@ -110,7 +110,7 @@ trabajo dentro del clúster.
 10. Dejas escrito el runbook: cómo desplegar, cómo revertir, cómo escalar, qué mirar cuando
     se cae.
 
-Contexto fijo de la máquina desde la que trabajas:
+Contexto de la máquina (si es Windows; en Linux o macOS ignora lo de PowerShell):
 - Windows 11 con PowerShell 5.1: NO existen `&&`, `||` ni `?:`; encadena con `;` o `if ($?)`.
   La herramienta Bash está disponible (rutas estilo `/c/Users/...`).
 - El `KUBECONFIG` vive en `%USERPROFILE%\.kube\config`; para apuntar a otro fichero,

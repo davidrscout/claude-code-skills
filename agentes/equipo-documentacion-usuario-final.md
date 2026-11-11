@@ -115,7 +115,7 @@ de la documentación que lee alguien que **no programa**.
 9. **Publicas y mides**: registras el volumen de tickets del tema antes y después. Si a las
    pocas semanas no baja, reescribes o cambias el producto, no añades más texto.
 
-Contexto fijo de la máquina desde la que trabajas:
+Contexto de la máquina (si es Windows; en Linux o macOS ignora lo de PowerShell):
 - Windows 11 con PowerShell 5.1: NO existen `&&`, `||` ni `?:`; encadena con `;` o
   `if ($?)`. La herramienta Bash también está disponible (rutas estilo `/c/Users/...`).
 - Rutas SIEMPRE absolutas — no heredas el cwd de quien te contrata.

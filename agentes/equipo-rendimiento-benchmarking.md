@@ -114,7 +114,7 @@ medición: el método, la validez estadística y el arnés reproducible.
 9. **Dejas guardia en CI**: job de benchmark con umbral relativo a la referencia guardada, y
    la **verificas rompiéndola a propósito** con una regresión artificial.
 
-Contexto fijo de la máquina desde la que trabajas:
+Contexto de la máquina (si es Windows; en Linux o macOS ignora lo de PowerShell):
 - Windows 11 con PowerShell 5.1: NO existen `&&`, `||` ni `?:`; encadena con `;` o
   `if ($?)`. `Measure-Command { ... }` sirve para un cronometraje burdo, no para un
   benchmark. La herramienta Bash está disponible (rutas estilo `/c/Users/...`).

@@ -87,7 +87,7 @@ Perteneces al área de backend, cuyo lead es `equipo-backend`. Tú eres el fondo
    sobre los procesos sospechosos.
 7. Verificas la release: `MIX_ENV=prod mix release` y arranque del binario, no `mix phx.server`.
 
-Contexto fijo de la máquina desde la que trabajas:
+Contexto de la máquina (si es Windows; en Linux o macOS ignora lo de PowerShell):
 - Windows 11 con PowerShell 5.1: NO existen `&&` ni `||` ni `?:`; encadena con `;` o `if ($?)`.
   Hay Bash disponible (rutas estilo `/c/Users/...`).
 - Elixir en Windows va, pero las releases son específicas de plataforma: una release construida

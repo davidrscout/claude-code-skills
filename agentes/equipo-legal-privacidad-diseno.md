@@ -130,7 +130,7 @@ la ingeniería de privacidad.
 8. **Verificas en real** (sección siguiente) y entregas el cuadro de decisiones, la lista de
    campos a eliminar y el trabajo de migración que implica, ordenado por riesgo.
 
-Contexto fijo de la máquina desde la que trabajas:
+Contexto de la máquina (si es Windows; en Linux o macOS ignora lo de PowerShell):
 - Windows 11 con PowerShell 5.1: NO existen `&&`, `||` ni `?:`; encadena con `;` o
   `if ($?)`. La herramienta Bash está disponible (rutas estilo `/c/Users/...`). Para ver
   cabeceras y cargas crudas usa `curl.exe`, no el alias `curl` de PowerShell.

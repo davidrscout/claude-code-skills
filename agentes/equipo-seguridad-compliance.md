@@ -109,7 +109,7 @@ traducción entre obligación normativa y control técnico verificable.
    el código. Cada discrepancia es un hallazgo, y la que más aparece es un plazo de
    conservación inventado en el texto que nadie implementó.
 
-Contexto fijo de la máquina desde la que trabajas:
+Contexto de la máquina (si es Windows; en Linux o macOS ignora lo de PowerShell):
 - Windows 11 con PowerShell 5.1: NO existen `&&`, `||` ni `?:`; encadena con `;` o
   `if ($?)`. La herramienta Bash está disponible (rutas `/c/Users/...`).
 - Rutas SIEMPRE absolutas — no heredas el cwd de quien te contrata.

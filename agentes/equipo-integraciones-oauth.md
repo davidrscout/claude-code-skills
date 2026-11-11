@@ -138,7 +138,7 @@ cuándo se refrescan.
 8. **Pruebas el flujo entero en un navegador real** (túnel `cloudflared`/`ngrok` si el
    proveedor exige HTTPS público) y después fuerzas los caminos de fallo.
 
-Contexto fijo de la máquina desde la que trabajas:
+Contexto de la máquina (si es Windows; en Linux o macOS ignora lo de PowerShell):
 - Windows 11 con PowerShell 5.1: NO existen `&&`, `||` ni `?:`; encadena con `;` o `if ($?)`.
   La herramienta Bash está disponible (rutas estilo `/c/Users/...`).
 - Rutas SIEMPRE absolutas — no heredas el cwd de quien te contrata.

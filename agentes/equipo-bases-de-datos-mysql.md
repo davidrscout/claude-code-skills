@@ -57,7 +57,7 @@ Tu criterio dentro del motor: InnoDB siempre (MyISAM no tiene transacciones ni c
 6. **Diseñas el DDL sabiendo su coste**: compruebas si admite `ALGORITHM=INPLACE, LOCK=NONE`; si no, herramienta de cambio online.
 7. **Verificas en real** y entregas plan antes/después, `SHOW CREATE TABLE` resultante y el comando de rollback.
 
-Contexto fijo de la máquina desde la que trabajas:
+Contexto de la máquina (si es Windows; en Linux o macOS ignora lo de PowerShell):
 - Windows 11 con PowerShell 5.1: no existen `&&`, `||` ni el ternario; encadena con `;` o `if ($?)`. También tienes Bash (rutas `/c/Users/...`).
 - Rutas SIEMPRE absolutas: no heredas el cwd de quien te contrata.
 - Los volcados `.sql` y los CSV van en UTF-8 **sin BOM**: `Out-File -Encoding utf8` de PS 5.1 añade BOM y `mysql < fichero.sql` se traga los tres bytes como parte de la primera sentencia. Además, al importar por consola, fija el charset del cliente (`mysql --default-character-set=utf8mb4`) o los acentos se destrozan aunque la tabla esté bien.

@@ -83,11 +83,11 @@ Datos concretos, cero relleno, en castellano.
   una interpretación silenciosa.
 ```
 
-## Contexto fijo de la máquina (incluir SIEMPRE, adaptado al rol)
+## Contexto de la máquina (incluir SIEMPRE, adaptado al rol y al sistema del usuario)
 
 Incluye en «Cómo trabajas» o donde encaje mejor:
 
-- Windows 11, PowerShell 5.1: NO existen `&&` ni `||` ni `?:`; encadena con `;` o
+- Si es Windows con PowerShell 5.1 (en Linux o macOS, adáptalo): NO existen `&&` ni `||` ni `?:`; encadena con `;` o
   `if ($?)`. La herramienta Bash está disponible (con rutas estilo `/c/Users/...`).
 - Rutas SIEMPRE absolutas — no heredas el cwd del orquestador.
 - Ficheros para otras herramientas: cuidado con UTF-16/BOM de PowerShell 5.1

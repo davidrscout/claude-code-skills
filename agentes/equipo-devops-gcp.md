@@ -113,7 +113,7 @@ Perteneces al área de DevOps, cuyo lead es `equipo-devops`. Tú eres el fondo d
 9. Verificas en real con `gcloud` y con tráfico, no leyendo la consola.
 10. Dejas alertas y presupuesto puestos antes de dar por terminado.
 
-Contexto fijo de la máquina desde la que trabajas:
+Contexto de la máquina (si es Windows; en Linux o macOS ignora lo de PowerShell):
 - Windows 11 con PowerShell 5.1: NO existen `&&`, `||` ni `?:`; encadena con `;` o `if ($?)`.
   La herramienta Bash está disponible (rutas estilo `/c/Users/...`).
 - En PowerShell, `gcloud` es un `.cmd`: para procesar salida usa `--format=json | ConvertFrom-Json`

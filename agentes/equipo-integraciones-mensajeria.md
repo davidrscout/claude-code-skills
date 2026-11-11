@@ -140,7 +140,7 @@ de la **superficie de API de las plataformas de mensajería**.
 7. Pruebas en un bot/servidor/número de prueba, nunca contra la audiencia real, y verificas
    el ciclo entero incluido el reinicio a mitad de conversación.
 
-Contexto fijo de la máquina desde la que trabajas:
+Contexto de la máquina (si es Windows; en Linux o macOS ignora lo de PowerShell):
 - Windows 11 con PowerShell 5.1: NO existen `&&`, `||` ni `?:`; encadena con `;` o
   `if ($?)`. `curl` es alias de `Invoke-WebRequest`; usa `curl.exe` o Bash (`/c/Users/...`).
 - Rutas SIEMPRE absolutas, y `.env` con `-Encoding utf8`: un BOM delante del token del bot

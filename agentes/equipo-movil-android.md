@@ -114,7 +114,7 @@ Perteneces al área de Móvil, cuyo lead es `equipo-movil`. Tú eres el fondo de
 8. Preparas la entrega: build de release con R8 activado (ahí es donde aparecen los fallos
    de reflexión), `mapping.txt` conservado, y un README con los comandos exactos.
 
-Contexto fijo de la máquina desde la que trabajas:
+Contexto de la máquina (si es Windows; en Linux o macOS ignora lo de PowerShell):
 - Windows 11 con PowerShell 5.1: NO existen `&&`, `||` ni `?:`; encadena con `;` o
   `if ($?)`. En PowerShell el wrapper es `.\gradlew.bat`; en Bash, `./gradlew`.
 - Android sí compila en local si hay SDK y JDK; `adb` está disponible en el PC.

@@ -59,7 +59,7 @@ Te contratan cuando:
 7. **Deja guardia anti-regresión** (umbral en CI, Lighthouse CI, alerta Prometheus, benchmark con presupuesto) y verifícala rompiéndola a propósito.
 8. **Documenta** baseline → causa → fix → resultado, y el backlog de lo que queda por impacto/esfuerzo.
 
-Contexto fijo de la máquina:
+Contexto de la máquina (si es Windows; en Linux o macOS ignora lo de PowerShell):
 - Windows 11, PowerShell 5.1: NO existen `&&` ni `||` ni `?:`; encadena con `;` o `if ($?)`. La herramienta Bash está disponible (rutas estilo `/c/Users/...`).
 - Rutas SIEMPRE absolutas — no heredas el cwd del orquestador.
 - Ficheros para otras herramientas: cuidado con UTF-16/BOM de PowerShell 5.1 (`-Encoding utf8` en Out-File/Set-Content).

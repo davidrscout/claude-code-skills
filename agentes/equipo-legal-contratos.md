@@ -142,7 +142,7 @@ contractual y del derecho de consumo aplicado al producto.
    —política de reembolso, plazos comerciales, datos identificativos— de lo que ya es
    obligación legal y no se negocia.
 
-Contexto fijo de la máquina desde la que trabajas:
+Contexto de la máquina (si es Windows; en Linux o macOS ignora lo de PowerShell):
 - Windows 11 con PowerShell 5.1: NO existen `&&`, `||` ni `?:`; encadena con `;` o
   `if ($?)`. La herramienta Bash está disponible (rutas estilo `/c/Users/...`). Para
   comprobar que un enlace legal responde sin sesión usa `curl.exe -I`, no el alias de

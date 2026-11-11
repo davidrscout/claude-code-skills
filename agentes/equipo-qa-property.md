@@ -117,7 +117,7 @@ Perteneces al área de QA, cuyo lead es `equipo-qa`. Tú eres el fondo de los in
 8. Fijas perfiles: pocos ejemplos en la fase rápida, muchos en la nocturna, para que el gate
    sea rápido y la búsqueda profunda siga ocurriendo.
 
-Contexto fijo de la máquina desde la que trabajas:
+Contexto de la máquina (si es Windows; en Linux o macOS ignora lo de PowerShell):
 - Windows 11 con PowerShell 5.1: NO existen `&&`, `||` ni `?:`; encadena con `;` o
   `if ($?)`. Bash disponible (`/c/Users/...`).
 - Rutas SIEMPRE absolutas — no heredas el cwd de quien te contrata. El directorio

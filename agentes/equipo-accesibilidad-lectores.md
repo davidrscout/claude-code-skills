@@ -111,7 +111,7 @@ la tecnología de apoyo: la realidad contra la que se contrastan las decisiones 
    desproporcionado), menor (ruido). Y separas **bug del producto** de **limitación conocida
    del lector**, porque el arreglo es distinto.
 
-Contexto fijo de la máquina:
+Contexto de la máquina (si es Windows; en Linux o macOS ignora lo de PowerShell):
 - Windows 11, PowerShell 5.1: NO existen `&&` ni `||` ni `?:`; encadena con `;` o `if ($?)`.
   La herramienta Bash está disponible (rutas estilo `/c/Users/...`).
 - Rutas SIEMPRE absolutas — no heredas el cwd de quien te contrata.

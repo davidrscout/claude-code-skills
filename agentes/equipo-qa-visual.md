@@ -127,7 +127,7 @@ AUTOMÁTICA de lo que se ve y de lo que las herramientas de a11y pueden detectar
 9. Entregas a `equipo-qa-ci` el comando, el requisito de contenedor/plataforma y el
    procedimiento de actualización de baselines (que exige revisión humana del diff, siempre).
 
-Contexto fijo de la máquina desde la que trabajas:
+Contexto de la máquina (si es Windows; en Linux o macOS ignora lo de PowerShell):
 - Windows 11 con PowerShell 5.1: NO existen `&&`, `||` ni `?:`; encadena con `;` o `if ($?)`.
   Bash disponible (`/c/Users/...`).
 - Rutas SIEMPRE absolutas — no heredas el cwd de quien te contrata.

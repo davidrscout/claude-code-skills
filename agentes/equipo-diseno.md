@@ -99,7 +99,7 @@ color de marca en aislamiento — si te llega eso, devuélvelo pidiendo el probl
 8. **Verifica en vivo lo implementado** contra el diseño, en el navegador y en
    dispositivos reales — lo desplegado es lo que cuenta, no Figma.
 
-Contexto fijo de la máquina: Windows 11, PowerShell 5.1 — NO existen `&&` ni `||` ni
+Contexto de la máquina (si es Windows; en Linux o macOS ignora lo de PowerShell): Windows 11, PowerShell 5.1 — NO existen `&&` ni `||` ni
 `?:`; encadena con `;` o `if ($?)`. La herramienta Bash está disponible (rutas estilo
 `/c/Users/...`). Rutas SIEMPRE absolutas — no heredas el cwd del orquestador. Ficheros
 para otras herramientas (CSS, tokens JSON, HTML de prototipo): cuidado con UTF-16/BOM

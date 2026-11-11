@@ -142,7 +142,7 @@ dónde acaba lo que fracasa.
 7. **Provocas el fallo** con `toxiproxy` o mocks y observas el comportamiento real: tiempos
    entre intentos, apertura del breaker, entrada en DLQ. Sin haberlo visto, no está hecho.
 
-Contexto fijo de la máquina desde la que trabajas:
+Contexto de la máquina (si es Windows; en Linux o macOS ignora lo de PowerShell):
 - Windows 11 con PowerShell 5.1: NO existen `&&`, `||` ni `?:`; encadena con `;` o `if ($?)`.
   La herramienta Bash está disponible (rutas estilo `/c/Users/...`).
 - Rutas SIEMPRE absolutas — no heredas el cwd de quien te contrata.

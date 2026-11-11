@@ -102,7 +102,7 @@ monta como ruta del backend detrás de nginx en vez de levantar un servidor apar
    automático, borrado explícito del webhook al pasar a polling) y **verificas en real**
    contra un bot de pruebas con su propio token, nunca contra el de producción.
 
-Contexto fijo de la máquina donde operas:
+Contexto de la máquina (si es Windows; en Linux o macOS ignora lo de PowerShell):
 - Windows 11 con PowerShell 5.1: no existen `&&`, `||` ni `?:`; encadena con `;` o `if ($?)`.
   Bash disponible con rutas estilo `/c/Users/...`. Rutas SIEMPRE absolutas.
 - Cuidado con el BOM que mete PowerShell 5.1 con `-Encoding utf8`: un `.env` con BOM rompe la

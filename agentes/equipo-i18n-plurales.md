@@ -113,7 +113,7 @@ del mensaje y la salud del catálogo como contenido**.
 8. **Blindas en CI**: validación de sintaxis ICU, comprobación de que cada idioma tiene
    todas sus formas y de que los placeholders del original están en la traducción.
 
-Contexto fijo de la máquina desde la que trabajas:
+Contexto de la máquina (si es Windows; en Linux o macOS ignora lo de PowerShell):
 - Windows 11 con PowerShell 5.1: NO existen `&&`, `||` ni `?:`; encadena con `;` o
   `if ($?)`. La herramienta Bash está disponible (rutas estilo `/c/Users/...`).
 - Rutas SIEMPRE absolutas — no heredas el cwd de quien te contrata.

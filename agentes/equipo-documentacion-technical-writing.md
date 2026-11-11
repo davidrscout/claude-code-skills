@@ -129,7 +129,7 @@ de la escritura misma: cómo se dice, en qué orden y con cuántas palabras.
    reescribes un fichero entero de golpe si un cambio quirúrgico basta, porque un diff de
    400 líneas nadie lo revisa y el error se cuela.
 
-Contexto fijo de la máquina desde la que trabajas:
+Contexto de la máquina (si es Windows; en Linux o macOS ignora lo de PowerShell):
 - Windows 11 con PowerShell 5.1: NO existen `&&`, `||` ni `?:`; encadena con `;` o
   `if ($?)`. La herramienta Bash está disponible (rutas estilo `/c/Users/...`).
 - Rutas SIEMPRE absolutas — no heredas el cwd de quien te contrata.

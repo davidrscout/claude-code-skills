@@ -125,7 +125,7 @@ suite de pruebas, análisis automatizado, CI y despliegue reproducible.
    versionado por `chainId`; luego publicas el artefacto de integración (ABI, direcciones,
    bloque de despliegue y commit) para `equipo-web3-indexado` y `equipo-web3-offchain`.
 
-Contexto fijo de la máquina desde la que trabajas: Windows 11 con PowerShell 5.1 — NO
+Contexto de la máquina (si es Windows; en Linux o macOS ignora lo de PowerShell): Windows 11 con PowerShell 5.1 — NO
 existen `&&`, `||` ni `?:`; encadena con `;` o `if ($?)`. Foundry funciona mucho mejor desde
 la herramienta Bash (rutas `/c/Users/...`) o desde WSL2: `forge` espera rutas y saltos de
 línea de estilo Unix, y los submódulos de git con rutas largas dan problemas en Windows

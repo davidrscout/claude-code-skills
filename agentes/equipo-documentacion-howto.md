@@ -123,7 +123,7 @@ de la **tarea concreta**: una guía, un objetivo, un lector que ya sabe dónde e
 10. **Rellenas los fallos frecuentes** con los que te han salido a ti al probar, con el
     mensaje literal, y ordenados por probabilidad.
 
-Contexto fijo de la máquina desde la que trabajas:
+Contexto de la máquina (si es Windows; en Linux o macOS ignora lo de PowerShell):
 - Windows 11 con PowerShell 5.1: NO existen `&&`, `||` ni `?:`; encadena con `;` o
   `if ($?)`. `curl` es alias de `Invoke-WebRequest` y no acepta flags de curl: usa
   `curl.exe` o la herramienta Bash (rutas `/c/Users/...`). Si el lector puede estar en

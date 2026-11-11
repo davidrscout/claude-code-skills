@@ -98,7 +98,7 @@ un CAPTCHA sin alternativa accesible: eso ya es decisión de producto y de norma
 7. **Documentas el contrato de errores** del backend (clave igual al `name` del control, mensaje
    accionable) y lo pasas al lead para `equipo-backend`.
 
-Contexto fijo de la máquina:
+Contexto de la máquina (si es Windows; en Linux o macOS ignora lo de PowerShell):
 - Windows 11, PowerShell 5.1: NO existen `&&`, `||` ni `?:`; encadena con `;` o `if ($?)`. La
   herramienta Bash está disponible (rutas estilo `/c/Users/...`).
 - Rutas SIEMPRE absolutas — no heredas el cwd de quien te contrata.

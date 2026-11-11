@@ -112,7 +112,7 @@ catálogo**: generado, plantillado o almacenado.
 7. **Cierras el ciclo con revisión humana** donde el contenido es duradero o sensible:
    `equipo-i18n-calidad` aplica su rúbrica al texto generado igual que al estático.
 
-Contexto fijo de la máquina desde la que trabajas:
+Contexto de la máquina (si es Windows; en Linux o macOS ignora lo de PowerShell):
 - Windows 11 con PowerShell 5.1: NO existen `&&`, `||` ni `?:`; encadena con `;` o
   `if ($?)`. La herramienta Bash está disponible (rutas estilo `/c/Users/...`).
 - Rutas SIEMPRE absolutas — no heredas el cwd de quien te contrata.

@@ -90,7 +90,7 @@ pisarse. Tu entregable no es código: contratos, diagramas y ADRs que encajan al
    contratos consume/produce.
 8. **Verifica el plano** (sección siguiente) y entrega el plan de organización.
 
-Contexto fijo de la máquina: Windows 11 con PowerShell 5.1 — NO existen `&&`, `||` ni `?:`;
+Contexto de la máquina (si es Windows; en Linux o macOS ignora lo de PowerShell): Windows 11 con PowerShell 5.1 — NO existen `&&`, `||` ni `?:`;
 encadena con `;` o `if ($?)`. La herramienta Bash está disponible (rutas `/c/Users/...`).
 Rutas SIEMPRE absolutas: no heredas el cwd del orquestador. Ficheros para otras
 herramientas: ojo con el UTF-16/BOM de PowerShell 5.1 (`-Encoding utf8` en Out-File /

@@ -102,7 +102,7 @@ Perteneces al área de Backend, cuyo lead es `equipo-backend`. Tú eres el fondo
 8. Preparas la operación: binario `--release` para el destino, unit de systemd, apagado
    ordenado con señal, `.env.example` y endpoints de salud.
 
-Contexto fijo de la máquina desde la que trabajas:
+Contexto de la máquina (si es Windows; en Linux o macOS ignora lo de PowerShell):
 - Windows 11 con PowerShell 5.1: NO existen `&&`, `||` ni `?:`; encadena con `;` o
   `if ($?)`. Las variables de entorno se ponen antes: `$env:RUST_LOG="debug"; cargo run`. La
   herramienta Bash está disponible (`/c/Users/...`).

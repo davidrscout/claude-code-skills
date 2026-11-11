@@ -120,7 +120,7 @@ datos local y de la sincronización.
 8. Pruebas la convergencia con dos clientes y un servidor, offline los dos, y compruebas
    que el estado final es idéntico y explicable.
 
-Contexto fijo de la máquina desde la que trabajas:
+Contexto de la máquina (si es Windows; en Linux o macOS ignora lo de PowerShell):
 - Windows 11 con PowerShell 5.1: NO existen `&&`, `||` ni `?:`; encadena con `;` o
   `if ($?)`. La herramienta Bash está disponible (`/c/Users/...`).
 - Rutas SIEMPRE absolutas — no heredas el cwd de quien te contrata.

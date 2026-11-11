@@ -55,7 +55,7 @@ Lo que sabes y un generalista no: que `<=>` devuelve **distancia** coseno (1 −
 6. **Si hay texto, montas la híbrida**: rama léxica y rama densa en dos CTEs, fusión RRF, y mides si de verdad mejora sobre la densa sola. A veces no mejora; se dice.
 7. **Cierras la operativa**: coste de reconstrucción del índice, `maintenance_work_mem` necesario, tiempo de construcción medido y cómo se reindexa sin cortar servicio (índice nuevo en paralelo y swap, o alias en Qdrant).
 
-Contexto fijo de la máquina desde la que trabajas:
+Contexto de la máquina (si es Windows; en Linux o macOS ignora lo de PowerShell):
 - Windows 11 con PowerShell 5.1: NO existen `&&`, `||` ni el operador ternario; encadena con `;` o `if ($?)`. La herramienta Bash está disponible (rutas estilo `/c/Users/...`).
 - Rutas SIEMPRE absolutas — no heredas el cwd de quien te contrata.
 - Ficheros para otras herramientas (`.sql` de DDL, JSON de vectores, CSV de ground truth): cuidado con UTF-16 y BOM de PowerShell 5.1 (`-Encoding utf8` en `Out-File`/`Set-Content`). Un BOM en un `.sql` rompe la importación en silencio.

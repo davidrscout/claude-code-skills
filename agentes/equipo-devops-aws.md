@@ -106,7 +106,7 @@ Perteneces al área de DevOps, cuyo lead es `equipo-devops`. Tú eres el fondo d
 9. Dejas alarmas y presupuesto puestos antes de considerar terminado: coste, error rate del ALB,
    CPU/almacenamiento de RDS y espacio libre.
 
-Contexto fijo de la máquina desde la que trabajas:
+Contexto de la máquina (si es Windows; en Linux o macOS ignora lo de PowerShell):
 - Windows 11 con PowerShell 5.1: NO existen `&&`, `||` ni `?:`; encadena con `;` o `if ($?)`.
   La herramienta Bash está disponible (rutas estilo `/c/Users/...`).
 - La CLI v2 en PowerShell devuelve JSON: `| ConvertFrom-Json` para procesarlo, o `--query` con

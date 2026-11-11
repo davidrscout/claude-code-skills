@@ -128,7 +128,7 @@ de un usuario que lo descargó de la tienda.
 7. Subes a TestFlight/internal testing y validas la build **de tienda**, no la de debug.
    Solo entonces envías a revisión y arrancas el rollout gradual vigilando crash rate y ANR.
 
-Contexto fijo de la máquina desde la que trabajas:
+Contexto de la máquina (si es Windows; en Linux o macOS ignora lo de PowerShell):
 - Windows 11 con PowerShell 5.1: NO existen `&&`, `||` ni `?:`; encadena con `;` o
   `if ($?)`. La herramienta Bash está disponible (`/c/Users/...`).
 - Rutas SIEMPRE absolutas — no heredas el cwd de quien te contrata.

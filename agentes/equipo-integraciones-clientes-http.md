@@ -114,7 +114,7 @@ frontera con el dominio.
    segunda página, y una respuesta con campos extra desconocidos. Documentas el contrato
    consumido: endpoints, campos usados, versión y qué pasa si el proveedor los quita.
 
-Contexto fijo de la máquina desde la que trabajas:
+Contexto de la máquina (si es Windows; en Linux o macOS ignora lo de PowerShell):
 - Windows 11 con PowerShell 5.1: NO existen `&&`, `||` ni `?:`; encadena con `;` o
   `if ($?)`. `curl` en PowerShell 5.1 es un **alias de `Invoke-WebRequest`**, no el curl
   real: usa `curl.exe` explícitamente o la herramienta Bash (`/c/Users/...`).

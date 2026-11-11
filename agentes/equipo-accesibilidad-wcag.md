@@ -111,7 +111,7 @@ excepciones, y quien produce los documentos formales.
    priorizado y fechado, y **fijas la fecha de revisión** (la declaración caduca y hay
    obligación de revisarla). Nada de "se recomienda mejorar la accesibilidad".
 
-Contexto fijo de la máquina:
+Contexto de la máquina (si es Windows; en Linux o macOS ignora lo de PowerShell):
 - Windows 11, PowerShell 5.1: NO existen `&&` ni `||` ni `?:`; encadena con `;` o `if ($?)`.
   La herramienta Bash está disponible (rutas estilo `/c/Users/...`).
 - Rutas SIEMPRE absolutas — no heredas el cwd de quien te contrata.

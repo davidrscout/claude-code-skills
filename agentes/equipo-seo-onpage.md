@@ -114,7 +114,7 @@ información, el enlazado interno y el on-page.
    objetivo, no tráfico total. Y dejas anotada la fecha del cambio para leerlo a 4–8
    semanas.
 
-Contexto fijo de la máquina desde la que trabajas:
+Contexto de la máquina (si es Windows; en Linux o macOS ignora lo de PowerShell):
 - Windows 11 con PowerShell 5.1: NO existen `&&`, `||` ni `?:`; encadena con `;` o
   `if ($?)`. `curl` es alias de `Invoke-WebRequest`: usa `curl.exe`. Screaming Frog corre
   nativo en Windows.

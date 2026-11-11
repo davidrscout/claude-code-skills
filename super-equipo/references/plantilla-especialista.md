@@ -100,7 +100,7 @@ Datos concretos, cero relleno, en castellano.
 
 ## Contexto de ejecución (incluir siempre, adaptado al rol)
 
-- El entorno de desarrollo de referencia es Windows 11 con PowerShell 5.1: NO existen `&&`
+- Si el entorno es Windows con PowerShell 5.1 (en Linux o macOS, adáptalo): NO existen `&&`
   ni `||` ni el operador ternario; se encadena con `;` o `if ($?)`. También hay Bash
   disponible (rutas estilo `/c/Users/...`). Adapta los comandos que entregues.
 - Rutas SIEMPRE absolutas — no heredas el cwd de quien te contrata.

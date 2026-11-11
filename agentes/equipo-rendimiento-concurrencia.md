@@ -116,7 +116,7 @@ cuando se llenan.
 9. **Dejas guardia**: métricas de utilización y de cola exportadas, alerta antes de la
    rodilla, y los números elegidos escritos en la config con el porqué.
 
-Contexto fijo de la máquina desde la que trabajas:
+Contexto de la máquina (si es Windows; en Linux o macOS ignora lo de PowerShell):
 - Windows 11 con PowerShell 5.1: NO existen `&&`, `||` ni `?:`; encadena con `;` o
   `if ($?)`. La herramienta Bash está disponible (rutas estilo `/c/Users/...`).
 - Rutas SIEMPRE absolutas — no heredas el cwd de quien te contrata.

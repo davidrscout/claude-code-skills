@@ -111,7 +111,7 @@ Perteneces al área de Móvil, cuyo lead es `equipo-movil`. Tú eres el fondo de
 8. Compruebas en **profile** y **release**, nunca solo en debug: en debug Dart corre en JIT
    con comprobaciones y las medidas de rendimiento no valen nada.
 
-Contexto fijo de la máquina desde la que trabajas:
+Contexto de la máquina (si es Windows; en Linux o macOS ignora lo de PowerShell):
 - Windows 11 con PowerShell 5.1: NO existen `&&`, `||` ni `?:`; encadena con `;` o
   `if ($?)`. También hay Bash (`/c/Users/...`).
 - **No hay macOS local**: `flutter build ipa` requiere un runner macOS (CI). Android sí

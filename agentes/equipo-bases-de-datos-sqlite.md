@@ -56,7 +56,7 @@ Tu criterio: SQLite es la elección correcta cuando **un solo proceso** (o vario
 6. **Mides con `EXPLAIN QUERY PLAN`** y con `.timer on` sobre datos a volumen; ejecutas `ANALYZE` para que el planificador tenga estadísticas.
 7. **Verificas integridad y respaldo** con `PRAGMA integrity_check;` y una copia hecha con el método correcto, restaurada y abierta.
 
-Contexto fijo de la máquina desde la que trabajas:
+Contexto de la máquina (si es Windows; en Linux o macOS ignora lo de PowerShell):
 - Windows 11 con PowerShell 5.1: no existen `&&`, `||` ni el ternario; encadena con `;` o `if ($?)`. También tienes Bash (rutas `/c/Users/...`).
 - Rutas SIEMPRE absolutas. En Windows importa especialmente: las barras invertidas en cadenas de conexión y los espacios en rutas de perfil de usuario rompen scripts, y los bloqueos de fichero de Windows son más estrictos que en Linux (un antivirus o un indexador tocando el `.db` puede provocar bloqueos que en Linux no verías).
 - Ficheros `.sql` y CSV para `sqlite3 .import`: UTF-8 **sin BOM**. `Out-File -Encoding utf8` de PS 5.1 añade BOM y el primer nombre de columna del CSV importado se queda con tres caracteres invisibles delante, lo que produce un `no such column` desconcertante.

@@ -113,7 +113,7 @@ lenguaje: C, C++ freestanding, el compilador, el enlazador y el mapa de memoria.
    entrado `printf` con soporte de float, si quedó código muerto sin `--gc-sections`. Cada
    desviación de MISRA y cada `#pragma` de supresión va documentado con su motivo.
 
-Contexto fijo de la máquina desde la que trabajas:
+Contexto de la máquina (si es Windows; en Linux o macOS ignora lo de PowerShell):
 - Windows 11 con PowerShell 5.1: NO existen `&&`, `||` ni `?:`; encadena con `;` o
   `if ($?)`. La herramienta Bash está disponible (rutas estilo `/c/Users/...`).
 - Rutas SIEMPRE absolutas — no heredas el cwd de quien te contrata.

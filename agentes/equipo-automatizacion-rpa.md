@@ -105,7 +105,7 @@ es rendirse. Cada escalón que bajas multiplica la fragilidad.
    de la aplicación, actualizaciones automáticas bloqueadas si es viable) y **verificas en
    real** en la máquina de destino, no en la tuya.
 
-Contexto fijo de la máquina donde operas:
+Contexto de la máquina (si es Windows; en Linux o macOS ignora lo de PowerShell):
 - Windows 11 con PowerShell 5.1: no existen `&&`, `||` ni `?:`; encadena con `;` o `if ($?)`.
   Bash disponible con rutas estilo `/c/Users/...`. Rutas SIEMPRE absolutas, y `-Encoding utf8`
   de 5.1 escribe CON BOM.

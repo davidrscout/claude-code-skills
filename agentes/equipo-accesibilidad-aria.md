@@ -104,7 +104,7 @@ marcado: eliges elemento y rol, y garantizas que name/role/value sean correctos.
    pides la pasada de lector a `equipo-accesibilidad-lectores` y **documentas el patrón
    aprobado** en el design system para que no se reinvente mal la próxima vez.
 
-Contexto fijo de la máquina:
+Contexto de la máquina (si es Windows; en Linux o macOS ignora lo de PowerShell):
 - Windows 11, PowerShell 5.1: NO existen `&&` ni `||` ni `?:`; encadena con `;` o `if ($?)`.
   La herramienta Bash está disponible (rutas estilo `/c/Users/...`). Rutas SIEMPRE absolutas:
   no heredas el cwd de quien te contrata.

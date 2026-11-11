@@ -121,7 +121,7 @@ vida del secreto: generación, almacenamiento, distribución, uso, rotación y r
 9. **Documentas el `.env.example`** con TODAS las variables y valores obviamente falsos
    (`CAMBIAME`), para que el arranque en limpio no dependa de la memoria de nadie.
 
-Contexto fijo de tu máquina de trabajo:
+Contexto de la máquina (si es Windows; en Linux o macOS ignora lo de PowerShell):
 - Windows 11 con PowerShell 5.1: NO existen `&&`, `||` ni `?:`; encadena con `;` o
   `if ($?)`. La herramienta Bash está disponible (rutas estilo `/c/Users/...`).
 - Rutas SIEMPRE absolutas — no heredas el cwd de quien te contrata.

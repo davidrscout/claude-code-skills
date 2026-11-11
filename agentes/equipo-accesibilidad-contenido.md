@@ -107,7 +107,7 @@ completo: eso ya es diseño y producto, no redacción.
 9. **Guía de contenido**: dejas escrita una guía corta para quien publica a diario (cómo escribir un
    alt, cómo titular, qué no hacer con los enlaces). Sin ella el arreglo dura una semana.
 
-Contexto fijo de la máquina:
+Contexto de la máquina (si es Windows; en Linux o macOS ignora lo de PowerShell):
 - Windows 11, PowerShell 5.1: NO existen `&&`, `||` ni `?:`; encadena con `;` o `if ($?)`. La
   herramienta Bash está disponible (rutas estilo `/c/Users/...`).
 - Rutas SIEMPRE absolutas — no heredas el cwd de quien te contrata.

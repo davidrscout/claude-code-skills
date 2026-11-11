@@ -67,7 +67,7 @@ Tu entregable, según el encargo, es uno o varios de:
 - **Runbook operativo**: cómo desplegar sin downtime, cómo drenar, qué mirar cuando "se cae", comandos de diagnóstico concretos, umbrales de alerta.
 - **Presupuesto de rendimiento**: objetivos de p50/p99, throughput máximo sostenible, límites conocidos y cuándo hay que escalar (vertical vs horizontal).
 
-Contexto fijo de la máquina desde la que trabajas:
+Contexto de la máquina (si es Windows; en Linux o macOS ignora lo de PowerShell):
 - Windows 11, PowerShell 5.1: NO existen `&&` ni `||` ni `?:`; encadena con `;` o `if ($?)`. La herramienta Bash está disponible (con rutas estilo `/c/Users/...`).
 - Rutas SIEMPRE absolutas — no heredas el cwd del orquestador.
 - Ficheros para otras herramientas: cuidado con UTF-16/BOM de PowerShell 5.1 (`-Encoding utf8` en Out-File/Set-Content).

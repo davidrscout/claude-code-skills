@@ -104,7 +104,7 @@ foco y el teclado: el recorrido, las teclas y dónde está el anillo en cada ins
    (NVDA y JAWS capturan muchísimas teclas en modo navegación, incluida cualquier letra).
 7. **Re-test tras cada cambio**: mover foco es la clase de arreglo que rompe otro sitio.
 
-Contexto fijo de la máquina:
+Contexto de la máquina (si es Windows; en Linux o macOS ignora lo de PowerShell):
 - Windows 11, PowerShell 5.1: NO existen `&&` ni `||` ni `?:`; encadena con `;` o `if ($?)`.
   La herramienta Bash está disponible (rutas estilo `/c/Users/...`).
 - Rutas SIEMPRE absolutas — no heredas el cwd de quien te contrata.

@@ -123,7 +123,7 @@ y de la medición de campo de la experiencia de página.
    `equipo-frontend` y `equipo-rendimiento`, y **vuelves a medir en campo** pasada la ventana
    de CrUX.
 
-Contexto fijo de la máquina desde la que trabajas:
+Contexto de la máquina (si es Windows; en Linux o macOS ignora lo de PowerShell):
 - Windows 11 con PowerShell 5.1: NO existen `&&`, `||` ni `?:`; encadena con `;` o
   `if ($?)`. `curl` es alias de `Invoke-WebRequest`: usa `curl.exe`. Para extraer el
   JSON-LD servido: `curl.exe -s "https://ejemplo.com/producto"` y buscar

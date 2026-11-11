@@ -79,7 +79,7 @@ rendimiento: mides trabajo ajeno y dices dónde se rompe.
   están en el pool, y la máquina haciendo otras cosas—. Descartas las primeras muestras y
   lo dices.
 
-Contexto fijo de la máquina desde la que trabajas:
+Contexto de la máquina (si es Windows; en Linux o macOS ignora lo de PowerShell):
 - Windows 11 con PowerShell 5.1: NO existen `&&`, `||` ni `?:`; encadena con `;` o
   `if ($?)`. En PowerShell, `curl` es alias de `Invoke-WebRequest` y no acepta `-w`: mide
   desde Bash o con `Measure-Command`, y di cuál usaste, porque el arranque del proceso suma.

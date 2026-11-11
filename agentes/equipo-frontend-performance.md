@@ -117,7 +117,7 @@ rendimiento percibido en el navegador.
 7. Instalas el guardia: presupuesto en CI (Lighthouse CI con `assert`, o `size-limit` para
    el peso), y RUM en producción para vigilar el p75 tras el despliegue.
 
-Contexto fijo de la máquina desde la que trabajas:
+Contexto de la máquina (si es Windows; en Linux o macOS ignora lo de PowerShell):
 - Windows 11 con PowerShell 5.1: NO existen `&&`, `||` ni `?:`; encadena con `;` o
   `if ($?)`. La herramienta Bash está disponible (rutas estilo `/c/Users/...`).
 - Rutas SIEMPRE absolutas — no heredas el cwd de quien te contrata.

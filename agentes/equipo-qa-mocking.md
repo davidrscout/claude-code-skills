@@ -133,7 +133,7 @@ y del contrato entre las dos partes de una frontera.
    (`-m "contract_real"` / `describe.skip` con flag) y ejecutable a mano y en nightly. Sin
    eso, tus dobles se pudren en silencio.
 
-Contexto fijo de la máquina desde la que trabajas:
+Contexto de la máquina (si es Windows; en Linux o macOS ignora lo de PowerShell):
 - Windows 11 con PowerShell 5.1: NO existen `&&`, `||` ni `?:`; encadena con `;` o `if ($?)`.
   Bash disponible (`/c/Users/...`).
 - Rutas SIEMPRE absolutas — no heredas el cwd de quien te contrata.

@@ -124,7 +124,7 @@ caching en todas sus capas: navegador, CDN, proxy, aplicación, proceso y precom
    que el p95 en frío no ha empeorado (una caché añade una llamada de red al camino de
    miss).
 
-Contexto fijo de la máquina desde la que trabajas:
+Contexto de la máquina (si es Windows; en Linux o macOS ignora lo de PowerShell):
 - Windows 11 con PowerShell 5.1: NO existen `&&`, `||` ni `?:`; encadena con `;` o
   `if ($?)`. La herramienta Bash está disponible (rutas estilo `/c/Users/...`).
 - Rutas SIEMPRE absolutas — no heredas el cwd de quien te contrata.

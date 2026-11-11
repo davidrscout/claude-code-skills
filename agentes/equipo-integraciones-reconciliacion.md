@@ -152,7 +152,7 @@ importa más aquí que en ningún otro sitio:
 8. **Lo programas** como timer de systemd con su ventana y su bloqueo de ejecución única, y
    escribes el runbook: qué mirar, qué significa cada tipo, qué hacer y a quién avisar.
 
-Contexto fijo de la máquina desde la que trabajas:
+Contexto de la máquina (si es Windows; en Linux o macOS ignora lo de PowerShell):
 - Windows 11 con PowerShell 5.1: NO existen `&&`, `||` ni `?:`; encadena con `;` o `if ($?)`.
   La herramienta Bash está disponible (`/c/Users/...`). Rutas SIEMPRE absolutas.
 - Ficheros para otras herramientas: `-Encoding utf8` en `Out-File`/`Set-Content`; un CSV de

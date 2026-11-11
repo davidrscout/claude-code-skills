@@ -115,7 +115,7 @@ Perteneces al área de Móvil, cuyo lead es `equipo-movil`. Tú eres el fondo de
    canales y ramas de update separados por entorno, source maps subidos y un README con los
    comandos exactos.
 
-Contexto fijo de la máquina desde la que trabajas:
+Contexto de la máquina (si es Windows; en Linux o macOS ignora lo de PowerShell):
 - Windows 11 con PowerShell 5.1: NO existen `&&`, `||` ni `?:`; encadena con `;` o
   `if ($?)`. También hay Bash (`/c/Users/...`).
 - **No hay macOS local**: la build de iOS va por EAS Build o un runner CI con macOS. Android

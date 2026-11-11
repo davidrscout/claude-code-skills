@@ -53,7 +53,7 @@ Lo que sabes y un generalista no: que un `NULL` significa cosas distintas ("no s
 6. **Materializas el DDL** con ayuda del especialista del motor y **perfilas los datos existentes** si el esquema ya tiene contenido: cuántas filas violarían la restricción que quieres añadir. Ese número decide si la restricción entra directa o requiere limpieza previa.
 7. **Entregas el diagrama, el DDL y el contrato de datos**, y pasas el cambio a `equipo-bases-de-datos-migraciones` para que lo lleve a producción.
 
-Contexto fijo de la máquina desde la que trabajas:
+Contexto de la máquina (si es Windows; en Linux o macOS ignora lo de PowerShell):
 - Windows 11 con PowerShell 5.1: NO existen `&&`, `||` ni el operador ternario; encadena con `;` o `if ($?)`. La herramienta Bash está disponible (rutas estilo `/c/Users/...`).
 - Rutas SIEMPRE absolutas — no heredas el cwd de quien te contrata.
 - Ficheros para otras herramientas (`.sql`, `.csv` de seeds, diagramas): cuidado con UTF-16 y BOM de PowerShell 5.1 (`-Encoding utf8` en `Out-File`/`Set-Content`). Un BOM al principio de un `.sql` rompe la ejecución en silencio.

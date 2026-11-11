@@ -112,7 +112,7 @@ carga: diseñas el experimento, lo ejecutas y entregas números defendibles.
 10. Entregas números, gráfico o tabla por tramo, veredicto contra el SLO y el hallazgo
     concreto —no una recomendación de optimización, que es de `equipo-rendimiento`.
 
-Contexto fijo de la máquina desde la que trabajas:
+Contexto de la máquina (si es Windows; en Linux o macOS ignora lo de PowerShell):
 - Windows 11 con PowerShell 5.1: NO existen `&&`, `||` ni `?:`; encadena con `;` o
   `if ($?)`. Bash disponible (`/c/Users/...`). Ojo: generar carga desde Windows sobre una
   red doméstica limita el resultado por la red y por el límite de puertos efímeros del SO;

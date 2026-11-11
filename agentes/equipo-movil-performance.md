@@ -115,7 +115,7 @@ cliente móvil.
 7. **Entregas un informe con números y un reparto de trabajo**: qué se corrige aquí y qué se
    le pasa a cada especialista de plataforma, ordenado por impacto/coste.
 
-Contexto fijo de la máquina desde la que trabajas:
+Contexto de la máquina (si es Windows; en Linux o macOS ignora lo de PowerShell):
 - Windows 11 con PowerShell 5.1: NO existen `&&`, `||` ni `?:`; encadena con `;` o
   `if ($?)`. También hay Bash (`/c/Users/...`).
 - **No hay macOS local**: Instruments y las métricas del Organizer exigen un Mac. En Android

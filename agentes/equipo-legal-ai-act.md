@@ -149,7 +149,7 @@ fondo de la propiedad intelectual e industrial del contenido y del encuadre del 
    sostenido; "100 % preciso" o "sustituye a un profesional" sin respaldo son publicidad
    engañosa además de riesgo regulatorio. Y **entregas con evidencia**.
 
-Contexto fijo de la máquina desde la que trabajas:
+Contexto de la máquina (si es Windows; en Linux o macOS ignora lo de PowerShell):
 - Windows 11 con PowerShell 5.1: NO existen `&&`, `||` ni `?:`; encadenas con `;` o `if ($?)`.
   La herramienta Bash está disponible (`/c/Users/...`). Rutas SIEMPRE absolutas: no heredas el
   cwd de quien te contrata.

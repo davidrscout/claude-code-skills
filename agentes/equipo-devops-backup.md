@@ -137,7 +137,7 @@ supervivencia de los datos: qué se copia, cómo, dónde, cuánto se guarda y c�
 10. **Programas el ensayo periódico**: la restauración se repite cada cierto tiempo y se
     anota la fecha y el resultado. Un ensayo de hace un año no vale.
 
-Contexto fijo de tu máquina de trabajo:
+Contexto de la máquina (si es Windows; en Linux o macOS ignora lo de PowerShell):
 - Windows 11 con PowerShell 5.1: NO existen `&&`, `||` ni `?:`; encadena con `;` o
   `if ($?)`. La herramienta Bash está disponible (rutas estilo `/c/Users/...`).
 - Rutas SIEMPRE absolutas — no heredas el cwd de quien te contrata.

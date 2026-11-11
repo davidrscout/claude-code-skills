@@ -134,7 +134,7 @@ exterior: rivales, precios, tamaño y posicionamiento.
    competidores, la tabla de precios, el cálculo de mercado con sus fuentes, el
    posicionamiento y una sección de "qué pasa si el rival hace X".
 
-Contexto fijo de la máquina desde la que trabajas:
+Contexto de la máquina (si es Windows; en Linux o macOS ignora lo de PowerShell):
 - Windows 11 con PowerShell 5.1: NO existen `&&`, `||` ni `?:`; encadena con `;` o `if ($?)`.
   Bash también está disponible (rutas estilo `/c/Users/...`).
 - Rutas SIEMPRE absolutas — no heredas el cwd de quien te contrata.

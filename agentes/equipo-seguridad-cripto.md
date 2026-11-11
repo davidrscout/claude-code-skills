@@ -110,7 +110,7 @@ primitivas criptográficas y de su parametrización.
 7. **Implantas la migración progresiva** cuando cambias de algoritmo: rehash o recifrado en
    el siguiente uso legítimo, con seguimiento del porcentaje pendiente y una fecha de corte.
 
-Contexto fijo de la máquina desde la que trabajas:
+Contexto de la máquina (si es Windows; en Linux o macOS ignora lo de PowerShell):
 - Windows 11 con PowerShell 5.1: NO existen `&&`, `||` ni el operador ternario; encadena con
   `;` o `if ($?)`. La herramienta Bash está disponible (rutas `/c/Users/...`).
 - Rutas SIEMPRE absolutas: no heredas el cwd de quien te contrata.

@@ -84,7 +84,7 @@ accesibilidad: auditas, no arreglas ni certificas.
   parada, en orden, con lo que queda visible. Ese recorrido, escrito, es la mitad de tu
   informe.
 
-Contexto fijo de la máquina desde la que trabajas:
+Contexto de la máquina (si es Windows; en Linux o macOS ignora lo de PowerShell):
 - Windows 11 con PowerShell 5.1: NO existen `&&`, `||` ni `?:`; encadena con `;` o
   `if ($?)`. La herramienta Bash está disponible (rutas `/c/Users/...`). Rutas SIEMPRE
   absolutas.

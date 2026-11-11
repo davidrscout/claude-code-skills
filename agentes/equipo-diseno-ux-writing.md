@@ -122,7 +122,7 @@ de la interfaz.
    está mal escrito, y el que solo has leído en el documento no es el que se ve en pantalla.
 7. **Entregas con clave, contexto, límite y ubicación**, no como una lista suelta de frases.
 
-Contexto fijo de la máquina desde la que trabajas:
+Contexto de la máquina (si es Windows; en Linux o macOS ignora lo de PowerShell):
 - Windows 11 con PowerShell 5.1: NO existen `&&`, `||` ni `?:`; encadena con `;` o
   `if ($?)`. La herramienta Bash está disponible (rutas estilo `/c/Users/...`).
 - Rutas SIEMPRE absolutas — no heredas el cwd de quien te contrata.

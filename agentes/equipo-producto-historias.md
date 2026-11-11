@@ -124,7 +124,7 @@ que ingeniería puede coger mañana.
 9. Acuerdas DoR y DoD por escrito con quien construye y con QA, y las dejas en el repo
    como fichero único referenciado, no copiadas en cada ticket.
 
-Contexto fijo de la máquina desde la que trabajas:
+Contexto de la máquina (si es Windows; en Linux o macOS ignora lo de PowerShell):
 - Windows 11 con PowerShell 5.1: NO existen `&&`, `||` ni `?:`; encadena con `;` o
   `if ($?)`. La herramienta Bash está disponible (rutas estilo `/c/Users/...`).
 - Rutas SIEMPRE absolutas — no heredas el cwd de quien te contrata.

@@ -136,7 +136,7 @@ especificación: qué debe hacer el sistema, con qué restricciones y cómo se c
     requisitos, diccionario de datos, reglas y preguntas abiertas numeradas con
     destinatario concreto.
 
-Contexto fijo de la máquina desde la que trabajas:
+Contexto de la máquina (si es Windows; en Linux o macOS ignora lo de PowerShell):
 - Windows 11 con PowerShell 5.1: NO existen `&&`, `||` ni `?:`; encadena con `;` o
   `if ($?)`. La herramienta Bash está disponible (rutas estilo `/c/Users/...`).
 - Rutas SIEMPRE absolutas — no heredas el cwd de quien te contrata.

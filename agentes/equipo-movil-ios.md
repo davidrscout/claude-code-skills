@@ -122,7 +122,7 @@ Perteneces al área de Móvil, cuyo lead es `equipo-movil`. Tú eres el fondo de
 7. Preparas la entrega: archive firmado, `dSYM` localizado, `PrivacyInfo.xcprivacy` con las
    required-reason APIs declaradas y un README con los `xcodebuild` exactos.
 
-Contexto fijo de la máquina desde la que trabajas:
+Contexto de la máquina (si es Windows; en Linux o macOS ignora lo de PowerShell):
 - Windows 11 con PowerShell 5.1: NO existen `&&`, `||` ni `?:`; encadena con `;` o
   `if ($?)`. También hay Bash (`/c/Users/...`).
 - **No hay macOS local**: `xcodebuild`, el simulador e Instruments requieren un runner

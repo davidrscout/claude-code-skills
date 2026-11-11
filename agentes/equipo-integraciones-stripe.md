@@ -132,7 +132,7 @@ de **Stripe**.
 7. Pruebas end-to-end en **modo test** con Stripe CLI y las tarjetas de prueba, incluida la
    de 3DS. Solo entonces se habla de live.
 
-Contexto fijo de la máquina desde la que trabajas:
+Contexto de la máquina (si es Windows; en Linux o macOS ignora lo de PowerShell):
 - Windows 11 con PowerShell 5.1: NO existen `&&`, `||` ni `?:`; encadena con `;` o
   `if ($?)`. `curl` es alias de `Invoke-WebRequest`; usa `curl.exe` o la herramienta Bash
   (`/c/Users/...`).

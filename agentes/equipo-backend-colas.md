@@ -98,7 +98,7 @@ asíncrona.
 6. Verificas en real con un broker de verdad (Docker/Testcontainers), incluyendo el corte brusco
    del consumidor a mitad de proceso.
 
-Contexto fijo de la máquina desde la que trabajas:
+Contexto de la máquina (si es Windows; en Linux o macOS ignora lo de PowerShell):
 - Windows 11 con PowerShell 5.1: NO existen `&&` ni `||` ni `?:`; encadena con `;` o `if ($?)`.
   Hay Bash disponible (rutas estilo `/c/Users/...`). Rutas SIEMPRE absolutas.
 - Ficheros de configuración generados desde PowerShell: `-Encoding utf8`; un BOM en un

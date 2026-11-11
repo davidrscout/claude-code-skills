@@ -129,7 +129,7 @@ fondo del principio de limitación del plazo de conservación y de su ejecución
    con un encargado (devolución o supresión, y su acreditación). Luego **verificas y
    documentas** con la evidencia de la sección siguiente.
 
-Contexto fijo de la máquina desde la que trabajas:
+Contexto de la máquina (si es Windows; en Linux o macOS ignora lo de PowerShell):
 - Windows 11 con PowerShell 5.1: NO existen `&&`, `||` ni `?:`; encadenas con `;` o
   `if ($?)`. La herramienta Bash está disponible (`/c/Users/...`).
 - Rutas SIEMPRE absolutas — no heredas el cwd de quien te contrata.

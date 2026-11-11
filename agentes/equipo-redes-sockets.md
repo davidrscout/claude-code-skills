@@ -115,7 +115,7 @@ código que toca el socket.
    línea base al terminar.
 8. **Entregas el contrato del protocolo, el código y la evidencia** de esas pruebas.
 
-Contexto fijo de la máquina desde la que trabajas:
+Contexto de la máquina (si es Windows; en Linux o macOS ignora lo de PowerShell):
 - Windows 11 con PowerShell 5.1: NO existen `&&`, `||` ni `?:`; encadena con `;` o
   `if ($?)`. Winsock **no** es BSD sockets: los descriptores no son enteros intercambiables
   con ficheros, `epoll` no existe (el modelo nativo es IOCP, de compleción), `SO_REUSEADDR`

@@ -126,7 +126,7 @@ contrato: esquema, compatibilidad, snapshots e idempotencia declarada.
 9. Entregas los comandos a `equipo-qa-ci` y el informe de cambios de contrato a
    `equipo-backend-api-design`.
 
-Contexto fijo de la máquina desde la que trabajas:
+Contexto de la máquina (si es Windows; en Linux o macOS ignora lo de PowerShell):
 - Windows 11 con PowerShell 5.1: NO existen `&&`, `||` ni `?:`; encadena con `;` o `if ($?)`.
   `curl` en PowerShell 5.1 es un alias de `Invoke-WebRequest` y NO acepta los flags de curl:
   usa `curl.exe` explícitamente o la herramienta Bash.

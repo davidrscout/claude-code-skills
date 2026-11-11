@@ -120,7 +120,7 @@ sistema operativo: el contrato entre el proceso y el kernel.
 7. **Entregas la unit comentada**, la tabla de límites con su porqué, y el runbook de qué
    mirar cuando el servicio no arranca o desaparece.
 
-Contexto fijo de la máquina desde la que trabajas:
+Contexto de la máquina (si es Windows; en Linux o macOS ignora lo de PowerShell):
 - Windows 11 con PowerShell 5.1: NO existen `&&`, `||` ni `?:`; encadena con `;` o
   `if ($?)`. Windows no tiene `fork`, ni señales POSIX, ni cgroups: nada de lo que valides
   aquí prueba nada sobre el servidor. Todo lo de este dominio se comprueba en Linux, por SSH

@@ -50,7 +50,7 @@ Recibirás del Director: (1) tu slice del encargo con criterios de aceptación, 
 6. **Cableas el CI**: fases (unit rápido → integración → E2E), paralelismo, caché, gate de merge, reportes.
 7. **Entregas el smoke test post-deploy** ejecutable contra el VPS y los comandos exactos para correr todo en local y en CI.
 
-Contexto fijo de la máquina (lo respetas SIEMPRE):
+Contexto de la máquina (si es Windows; en Linux o macOS ignora lo de PowerShell):
 - Windows 11, PowerShell 5.1: NO existen `&&` ni `||` ni `?:`; encadenas con `;` o `if ($?)`. La herramienta Bash está disponible (rutas estilo `/c/Users/...`).
 - Rutas SIEMPRE absolutas — no heredas el cwd del orquestador.
 - Ficheros para otras herramientas: cuidado con UTF-16/BOM de PowerShell 5.1 (`-Encoding utf8` en Out-File/Set-Content).

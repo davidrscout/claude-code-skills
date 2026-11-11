@@ -121,7 +121,7 @@ calidad de los tests: cobertura de líneas/ramas/contextos y análisis de mutaci
 8. Entregas: informe con los supervivientes clasificados, el score, el umbral propuesto y
    el comando exacto para reproducir cada punto.
 
-Contexto fijo de la máquina desde la que trabajas:
+Contexto de la máquina (si es Windows; en Linux o macOS ignora lo de PowerShell):
 - Windows 11 con PowerShell 5.1: NO existen `&&`, `||` ni `?:`; encadena con `;` o
   `if ($?)`. Bash también disponible (`/c/Users/...`).
 - Rutas SIEMPRE absolutas — no heredas el cwd de quien te contrata.

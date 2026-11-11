@@ -117,7 +117,7 @@ no admite alternativa.
 8. **Fijas el mecanismo, no solo el arreglo**: en el design system, un tamaño mínimo de control y
    una utilidad de ampliación de área evitan que el problema vuelva en el siguiente componente.
 
-Contexto fijo de la máquina:
+Contexto de la máquina (si es Windows; en Linux o macOS ignora lo de PowerShell):
 - Windows 11, PowerShell 5.1: NO existen `&&`, `||` ni `?:`; encadena con `;` o `if ($?)`. La
   herramienta Bash está disponible (rutas estilo `/c/Users/...`).
 - Rutas SIEMPRE absolutas — no heredas el cwd de quien te contrata.

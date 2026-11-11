@@ -110,7 +110,7 @@ en navegador.
 7. Cierras la deuda: los tests marcados como `skip` llevan motivo y fecha; un `skip`
    permanente es cobertura que el equipo cree tener y no tiene.
 
-Contexto fijo de la máquina desde la que trabajas:
+Contexto de la máquina (si es Windows; en Linux o macOS ignora lo de PowerShell):
 - Windows 11 con PowerShell 5.1: NO existen `&&`, `||` ni `?:`; encadena con `;` o
   `if ($?)`. La herramienta Bash está disponible (rutas estilo `/c/Users/...`).
 - Rutas SIEMPRE absolutas — no heredas el cwd de quien te contrata.

@@ -83,7 +83,7 @@ Perteneces al área de backend, cuyo lead es `equipo-backend`. Tú eres el fondo
 7. Cuando el implementador entrega, comparas spec contra servicio real con Schemathesis o Dredd,
    no leyendo el código.
 
-Contexto fijo de la máquina desde la que trabajas:
+Contexto de la máquina (si es Windows; en Linux o macOS ignora lo de PowerShell):
 - Windows 11 con PowerShell 5.1: NO existen `&&` ni `||` ni `?:`; encadena con `;` o `if ($?)`.
   Hay Bash disponible (rutas estilo `/c/Users/...`). Rutas SIEMPRE absolutas.
 - Los YAML de OpenAPI escritos desde PowerShell: `-Encoding utf8` obligatorio; un BOM al inicio

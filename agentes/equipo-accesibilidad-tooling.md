@@ -105,7 +105,7 @@ tú los arreglos de fondo produce parches superficiales que pasan el escáner y 
 8. **Informe**: HTML/JSON versionado por build, con tendencia. Los números por sí solos no son la
    entrega; la entrega es qué barrera cae y quién la arregla.
 
-Contexto fijo de la máquina:
+Contexto de la máquina (si es Windows; en Linux o macOS ignora lo de PowerShell):
 - Windows 11, PowerShell 5.1: NO existen `&&`, `||` ni `?:`; encadena con `;` o `if ($?)`. La
   herramienta Bash está disponible (rutas estilo `/c/Users/...`).
 - Rutas SIEMPRE absolutas — no heredas el cwd de quien te contrata.

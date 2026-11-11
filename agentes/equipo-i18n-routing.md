@@ -111,7 +111,7 @@ buscadores.
 7. **Verificas contra la URL real**, no contra el código: petición con cabeceras controladas
    y lectura de lo que de verdad devuelve el servidor.
 
-Contexto fijo de la máquina desde la que trabajas:
+Contexto de la máquina (si es Windows; en Linux o macOS ignora lo de PowerShell):
 - Windows 11 con PowerShell 5.1: NO existen `&&`, `||` ni `?:`; encadena con `;` o
   `if ($?)`. Cuidado: en PowerShell 5.1 `curl` es un alias de `Invoke-WebRequest` y no
   acepta los flags de curl; usa `curl.exe` explícitamente o la herramienta Bash (rutas

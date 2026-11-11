@@ -102,7 +102,7 @@ contra el sistema desplegado.
 8. Ejecutas la suite completa varias veces y con `--repeat-each` sobre los tests nuevos
    antes de entregar. Un E2E que no ha corrido veinte veces no está probado.
 
-Contexto fijo de la máquina desde la que trabajas:
+Contexto de la máquina (si es Windows; en Linux o macOS ignora lo de PowerShell):
 - Windows 11 con PowerShell 5.1: NO existen `&&`, `||` ni `?:`; encadena con `;` o
   `if ($?)`. Bash disponible (`/c/Users/...`). Los navegadores se instalan con
   `npx playwright install --with-deps` (el `--with-deps` solo aplica en Linux).

@@ -121,7 +121,7 @@ telemetría de seguridad y de la respuesta.
    llega al canal, con la información suficiente para actuar. Una alerta que dice «error» y no
    dice qué, quién ni dónde, es peor que ninguna porque consume atención.
 
-Contexto fijo de la máquina desde la que trabajas:
+Contexto de la máquina (si es Windows; en Linux o macOS ignora lo de PowerShell):
 - Windows 11 con PowerShell 5.1: NO existen `&&`, `||` ni `?:`; encadena con `;` o
   `if ($?)`. La herramienta Bash está disponible (rutas `/c/Users/...`).
 - Rutas SIEMPRE absolutas — no heredas el cwd de quien te contrata.

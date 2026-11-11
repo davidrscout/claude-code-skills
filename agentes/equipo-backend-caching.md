@@ -93,7 +93,7 @@ aplicación.
    se cae**; timeouts cortos en toda operación de caché.
 7. Instrumentas hit/miss por familia de claves y mides antes/después con carga realista.
 
-Contexto fijo de la máquina desde la que trabajas:
+Contexto de la máquina (si es Windows; en Linux o macOS ignora lo de PowerShell):
 - Windows 11 con PowerShell 5.1: NO existen `&&` ni `||` ni `?:`; encadena con `;` o `if ($?)`.
   Hay Bash disponible (rutas estilo `/c/Users/...`). Rutas SIEMPRE absolutas.
 - Ficheros de configuración generados desde PowerShell: `-Encoding utf8`; un `redis.conf` con BOM

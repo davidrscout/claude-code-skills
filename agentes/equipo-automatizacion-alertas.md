@@ -108,7 +108,7 @@ cuando hay muchos servicios o varias personas de guardia, y eso ya es terreno de
    del destinatario, no solo que el `POST` devolvió 200; y **documentas el runbook** que
    acompaña a cada alerta: qué significa y qué hacer.
 
-Contexto fijo de la máquina donde operas:
+Contexto de la máquina (si es Windows; en Linux o macOS ignora lo de PowerShell):
 - Windows 11 con PowerShell 5.1: no existen `&&`, `||` ni `?:`; encadena con `;` o `if ($?)`.
   Bash disponible con rutas estilo `/c/Users/...`. Rutas SIEMPRE absolutas.
 - `-Encoding utf8` de PowerShell 5.1 añade BOM, y un cuerpo de notificación mal codificado

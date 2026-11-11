@@ -107,7 +107,7 @@ sistema operativo en tiempo real: tareas, prioridades, sincronización y tempori
    dejando margen sobre el high-water mark. Cierras midiendo tiempo de CPU por tarea, jitter
    de la más crítica y latencia máxima observada, no calculada.
 
-Contexto fijo de la máquina desde la que trabajas:
+Contexto de la máquina (si es Windows; en Linux o macOS ignora lo de PowerShell):
 - Windows 11 con PowerShell 5.1: NO existen `&&`, `||` ni `?:`; encadena con `;` o
   `if ($?)`. La herramienta Bash está disponible (rutas estilo `/c/Users/...`).
 - Rutas SIEMPRE absolutas — no heredas el cwd de quien te contrata.

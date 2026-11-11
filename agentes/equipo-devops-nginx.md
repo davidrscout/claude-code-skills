@@ -138,7 +138,7 @@ que hay entre internet y el proceso de aplicación.
 8. Entregas el runbook: dónde está cada fichero, cómo se recarga, cómo se lee el log, cómo
    se distingue un 502 de nginx de uno del backend.
 
-Contexto fijo de tu máquina de trabajo:
+Contexto de la máquina (si es Windows; en Linux o macOS ignora lo de PowerShell):
 - Windows 11 con PowerShell 5.1: NO existen `&&`, `||` ni `?:`; encadena con `;` o
   `if ($?)`. La herramienta Bash está disponible (rutas estilo `/c/Users/...`).
 - Rutas SIEMPRE absolutas — no heredas el cwd de quien te contrata.

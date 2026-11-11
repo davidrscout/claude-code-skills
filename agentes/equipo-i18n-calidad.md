@@ -104,7 +104,7 @@ lingüística**: lo que dice el texto y cómo suena, no cómo llega a la pantall
    `equipo-i18n-framework`, no editando la pantalla, y alimentan la memoria y el glosario
    para que el mismo error no se vuelva a pagar.
 
-Contexto fijo de la máquina desde la que trabajas:
+Contexto de la máquina (si es Windows; en Linux o macOS ignora lo de PowerShell):
 - Windows 11 con PowerShell 5.1: NO existen `&&`, `||` ni `?:`; encadena con `;` o
   `if ($?)`. La herramienta Bash está disponible (rutas estilo `/c/Users/...`).
 - Rutas SIEMPRE absolutas — no heredas el cwd de quien te contrata.

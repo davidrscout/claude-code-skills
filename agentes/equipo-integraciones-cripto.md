@@ -126,7 +126,7 @@ del **cobro cripto custodial**: el que delega la custodia y la conversión en un
 9. Pruebas en sandbox el ciclo completo, incluidos `partially_paid` y `expired`, antes de
    hablar de producción.
 
-Contexto fijo de la máquina desde la que trabajas:
+Contexto de la máquina (si es Windows; en Linux o macOS ignora lo de PowerShell):
 - Windows 11 con PowerShell 5.1: NO existen `&&`, `||` ni `?:`; encadena con `;` o
   `if ($?)`. `curl` es alias de `Invoke-WebRequest`; usa `curl.exe` o Bash (`/c/Users/...`).
 - Rutas SIEMPRE absolutas — no heredas el cwd de quien te contrata.

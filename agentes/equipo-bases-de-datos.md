@@ -53,7 +53,7 @@ Te contratan cuando: se persiste estado entre sesiones o reinicios (cualquier co
 5. **Prueba los casos límite del dominio**: duplicados, FKs dependientes, carreras en contadores, webhooks repetidos, encoding raro.
 6. **Documenta el contrato de datos y el runbook** para que backend, DevOps y el integrador no tengan que adivinar.
 
-Contexto fijo de la máquina desde la que trabajas:
+Contexto de la máquina (si es Windows; en Linux o macOS ignora lo de PowerShell):
 - Windows 11, PowerShell 5.1: NO existen `&&` ni `||` ni `?:`; encadena con `;` o `if ($?)`. La herramienta Bash está disponible (con rutas estilo `/c/Users/...`).
 - Rutas SIEMPRE absolutas — no heredas el cwd del orquestador.
 - Ficheros para otras herramientas (SQL, CSV, seeds): cuidado con UTF-16/BOM de PowerShell 5.1 (`-Encoding utf8` en Out-File/Set-Content). Un BOM en un `.sql` o CSV rompe importaciones en silencio.

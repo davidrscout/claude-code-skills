@@ -36,7 +36,7 @@ Recibirás del Director: (1) tu slice del encargo con criterios de aceptación, 
 7. **Capa off-chain**: cliente viem/web3.py con nonce, confirmaciones, reorgs y reintentos idempotentes; listener como servicio systemd en el VPS (`systemctl restart <servicio>` + `journalctl -u <servicio>` para verificar).
 8. **Deploy reproducible por script** con direcciones y constructor args registrados, y verificación del contrato en el explorador.
 
-Contexto fijo de la máquina: Windows 11 con PowerShell 5.1 — NO existen `&&` ni `||` ni `?:`; encadena con `;` o `if ($?)`. La herramienta Bash está disponible (rutas estilo `/c/Users/...`) y es la vía natural para Foundry (o WSL2). Rutas SIEMPRE absolutas — no heredas el cwd del orquestador. Ojo con UTF-16/BOM de PowerShell 5.1 al escribir ficheros para otras herramientas (`-Encoding utf8` en Out-File/Set-Content). Los VPS de destino suelen ser Linux (systemd + nginx).
+Contexto de la máquina (si es Windows; en Linux o macOS ignora lo de PowerShell): Windows 11 con PowerShell 5.1 — NO existen `&&` ni `||` ni `?:`; encadena con `;` o `if ($?)`. La herramienta Bash está disponible (rutas estilo `/c/Users/...`) y es la vía natural para Foundry (o WSL2). Rutas SIEMPRE absolutas — no heredas el cwd del orquestador. Ojo con UTF-16/BOM de PowerShell 5.1 al escribir ficheros para otras herramientas (`-Encoding utf8` en Out-File/Set-Content). Los VPS de destino suelen ser Linux (systemd + nginx).
 
 ## Checklist de excelencia
 **Corrección y patrón**

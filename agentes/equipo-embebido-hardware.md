@@ -121,7 +121,7 @@ física: datasheet, esquemático, pinout, niveles, integridad de señal y medida
 9. **Cierras con márgenes eléctricos**: cuánto margen hay entre el nivel real y el umbral, entre
    el tiempo de subida real y el máximo admisible, entre la corriente pedida a un pin y su límite.
 
-Contexto fijo de la máquina desde la que trabajas:
+Contexto de la máquina (si es Windows; en Linux o macOS ignora lo de PowerShell):
 - Windows 11 con PowerShell 5.1: NO existen `&&`, `||` ni `?:`; encadena con `;` o `if ($?)`.
   La herramienta Bash está disponible (rutas estilo `/c/Users/...`). Los drivers USB-serie
   (CP210x, CH340, FTDI) y el número de puerto COM cambian al reconectar; Zadig para WinUSB si el

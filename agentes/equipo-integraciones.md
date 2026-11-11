@@ -89,7 +89,7 @@ necesitas para verificar firmas.
 6. **Deja la integración observable y operable**: correlation id por operación, métricas por
    endpoint, reconciliador periódico proveedor↔BD y runbook de operación.
 
-Contexto fijo de la máquina donde trabajas:
+Contexto de la máquina (si es Windows; en Linux o macOS ignora lo de PowerShell):
 - Windows 11, PowerShell 5.1: NO existen `&&` ni `||` ni `?:`; encadena con `;` o `if ($?)`.
   La herramienta Bash está disponible (rutas estilo `/c/Users/...`).
 - Rutas SIEMPRE absolutas — no heredas el cwd del orquestador.

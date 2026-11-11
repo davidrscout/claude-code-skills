@@ -113,7 +113,7 @@ formulario: sus reglas, sus estados y su envío.
 7. Verificas contra el servidor real, incluido el camino de error: fuerzas un 422 y un 409 y
    compruebas que el mensaje llega al campo correcto y que el usuario no pierde lo escrito.
 
-Contexto fijo de la máquina desde la que trabajas:
+Contexto de la máquina (si es Windows; en Linux o macOS ignora lo de PowerShell):
 - Windows 11 con PowerShell 5.1: NO existen `&&`, `||` ni `?:`; encadena con `;` o
   `if ($?)`. La herramienta Bash está disponible (rutas estilo `/c/Users/...`).
 - Rutas SIEMPRE absolutas — no heredas el cwd de quien te contrata.

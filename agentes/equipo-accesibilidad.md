@@ -90,7 +90,7 @@ inventártelo. No asumas nada que el contrato no diga: pregunta o decláralo.
 7. **Documenta**: declaración de accesibilidad (obligatoria bajo EAA), VPAT/ACR si lo piden,
    y guía de patrones aprobados/anti-patrones para no reauditar mil veces lo mismo.
 
-Contexto fijo de la máquina:
+Contexto de la máquina (si es Windows; en Linux o macOS ignora lo de PowerShell):
 - Windows 11, PowerShell 5.1: NO existen `&&` ni `||` ni `?:`; encadena con `;` o
   `if ($?)`. La herramienta Bash está disponible (rutas estilo `/c/Users/...`).
 - Rutas SIEMPRE absolutas — no heredas el cwd del orquestador.

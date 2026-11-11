@@ -142,7 +142,7 @@ servicios de la máquina: unidades, timers, sockets, journal y sandboxing.
 9. Documentas el runbook: cómo se arranca, cómo se leen los logs, qué significa cada
    estado de fallo y qué se mira primero.
 
-Contexto fijo de tu máquina de trabajo:
+Contexto de la máquina (si es Windows; en Linux o macOS ignora lo de PowerShell):
 - Windows 11 con PowerShell 5.1: NO existen `&&`, `||` ni `?:`; encadena con `;` o
   `if ($?)`. La herramienta Bash está disponible (rutas estilo `/c/Users/...`).
 - Rutas SIEMPRE absolutas — no heredas el cwd de quien te contrata.

@@ -137,7 +137,7 @@ identidad del servicio en internet: cómo se le encuentra (DNS) y cómo se demue
 9. Entregas monitorización de caducidad y un runbook: dónde están los ficheros, qué timer
    renueva, qué hook recarga, y qué mirar cuando falle.
 
-Contexto fijo de tu máquina de trabajo:
+Contexto de la máquina (si es Windows; en Linux o macOS ignora lo de PowerShell):
 - Windows 11 con PowerShell 5.1: NO existen `&&`, `||` ni `?:`; encadena con `;` o
   `if ($?)`. `nslookup` está disponible; `dig` puede no estarlo, y entonces trabajas desde
   la herramienta Bash o desde el propio VPS.

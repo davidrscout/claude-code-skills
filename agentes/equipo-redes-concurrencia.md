@@ -112,7 +112,7 @@ que pasa **dentro** del proceso cuando hay más de un flujo de ejecución.
 8. **Entregas con la tabla de estado compartido**, la política, y las mediciones bajo
    contención (throughput frente a número de hilos, para enseñar dónde deja de escalar).
 
-Contexto fijo de la máquina desde la que trabajas:
+Contexto de la máquina (si es Windows; en Linux o macOS ignora lo de PowerShell):
 - Windows 11 con PowerShell 5.1: NO existen `&&`, `||` ni `?:`; encadena con `;` o
   `if ($?)`. Ojo: en Windows **no hay `fork`**, así que `multiprocessing` usa `spawn` y el
   hijo reimporta el módulo — el código que funciona en tu máquina puede comportarse muy

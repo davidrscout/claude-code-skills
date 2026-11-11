@@ -125,7 +125,7 @@ de la documentación **dentro del código fuente** y de la referencia que se gen
 10. **Dejas los linters de docstrings en CI** para que el siguiente cambio de firma no pueda
     entrar sin actualizar la documentación.
 
-Contexto fijo de la máquina desde la que trabajas:
+Contexto de la máquina (si es Windows; en Linux o macOS ignora lo de PowerShell):
 - Windows 11 con PowerShell 5.1: NO existen `&&`, `||` ni `?:`; encadena con `;` o
   `if ($?)`. Bash también disponible (rutas estilo `/c/Users/...`).
 - Rutas SIEMPRE absolutas — no heredas el cwd de quien te contrata.

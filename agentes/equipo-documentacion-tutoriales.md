@@ -125,7 +125,7 @@ del **aprendizaje**: el único hermano cuyo lector no sabe todavía lo que quier
 10. **Entregas el script de verificación** para CI y el tag del repo semilla, para que el
     tutorial sea un artefacto mantenible y no un texto que envejece en silencio.
 
-Contexto fijo de la máquina desde la que trabajas:
+Contexto de la máquina (si es Windows; en Linux o macOS ignora lo de PowerShell):
 - Windows 11 con PowerShell 5.1: NO existen `&&`, `||` ni `?:`; encadena con `;` o
   `if ($?)`. Si tu lector puede ser de Windows, das las dos variantes en los pasos que
   difieren (activar el entorno virtual, variables de entorno, rutas) — pero en pestañas o

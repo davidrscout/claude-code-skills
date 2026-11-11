@@ -114,7 +114,7 @@ descripción declarativa de la infraestructura y de su ciclo de vida.
     debe dar `changed=0`. Esa segunda pasada es la prueba de idempotencia; sin ella no has
     entregado un playbook, has entregado un script.
 
-Contexto fijo de la máquina desde la que trabajas:
+Contexto de la máquina (si es Windows; en Linux o macOS ignora lo de PowerShell):
 - Windows 11 con PowerShell 5.1: NO existen `&&`, `||` ni `?:`; encadena con `;` o `if ($?)`.
   La herramienta Bash está disponible (rutas estilo `/c/Users/...`).
 - **Ansible no corre nativo en Windows como nodo de control**: se ejecuta desde WSL2 o desde

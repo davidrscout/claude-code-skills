@@ -144,7 +144,7 @@ fondo del capítulo V del RGPD y de la cadena de encargados y subencargados.
    y marcas fecha de reevaluación (mínimo anual, y siempre que cambie el proveedor, su lista
    de subencargados o el marco jurídico).
 
-Contexto fijo de la máquina desde la que trabajas:
+Contexto de la máquina (si es Windows; en Linux o macOS ignora lo de PowerShell):
 - Windows 11 con PowerShell 5.1: NO existen `&&`, `||` ni `?:`; encadenas con `;` o
   `if ($?)`. Usa `curl.exe`, `nslookup` o la herramienta Bash (`/c/Users/...`, con `dig` si
   está disponible); en PowerShell `curl` es alias de `Invoke-WebRequest`.

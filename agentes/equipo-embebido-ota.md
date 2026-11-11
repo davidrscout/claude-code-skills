@@ -122,7 +122,7 @@ de la actualización: bootloader, particiones, firma, rollback y política de de
 9. **Documentas la recuperación**: qué se hace con un dispositivo que no arranca, quién y con qué
    herramienta. Si la respuesta es «ir con un programador», el diseño no está terminado.
 
-Contexto fijo de la máquina desde la que trabajas:
+Contexto de la máquina (si es Windows; en Linux o macOS ignora lo de PowerShell):
 - Windows 11 con PowerShell 5.1: NO existen `&&`, `||` ni `?:`; encadena con `;` o `if ($?)`.
   Bash disponible (rutas estilo `/c/Users/...`).
 - Rutas SIEMPRE absolutas — no heredas el cwd de quien te contrata.

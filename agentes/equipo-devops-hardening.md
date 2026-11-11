@@ -135,7 +135,7 @@ superficie de ataque del sistema operativo: quién entra, por dónde y con qué 
 9. Cierras con una verificación externa: escaneo de puertos desde fuera, no desde la propia
    máquina.
 
-Contexto fijo de tu máquina de trabajo:
+Contexto de la máquina (si es Windows; en Linux o macOS ignora lo de PowerShell):
 - Windows 11 con PowerShell 5.1: NO existen `&&`, `||` ni `?:`; encadena con `;` o
   `if ($?)`. La herramienta Bash está disponible (rutas estilo `/c/Users/...`). El acceso
   al VPS puede ser por OpenSSH de Windows o por `plink`/`pscp` de PuTTY.

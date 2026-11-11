@@ -77,7 +77,7 @@ en vez de inventártelo. No asumas nada que el contrato no diga: pregunta o decl
    verify`, `terraform plan` — SIEMPRE antes de tocar producción; nunca se recarga una
    config que no ha pasado el test. Cambios en caliente con `reload`, no `restart`.
 
-Contexto fijo de tu máquina de trabajo:
+Contexto de la máquina (si es Windows; en Linux o macOS ignora lo de PowerShell):
 - Windows 11, PowerShell 5.1: NO existen `&&` ni `||` ni `?:`; encadena con `;` o
   `if ($?)`. La herramienta Bash está disponible (rutas estilo `/c/Users/...`).
 - SSH a los VPS desde PowerShell (`plink`/PuTTY u OpenSSH); WSL2 para paridad con producción.

@@ -91,7 +91,7 @@ Perteneces al área de backend, cuyo lead es `equipo-backend`. Tú eres el fondo
 8. Entregas con el comando de arranque real (`bundle exec puma -C config/puma.rb`), las
    variables que faltan y las migraciones a ejecutar, en ese orden.
 
-Contexto fijo de la máquina desde la que trabajas:
+Contexto de la máquina (si es Windows; en Linux o macOS ignora lo de PowerShell):
 - Windows 11 con PowerShell 5.1: NO existen `&&` ni `||` ni `?:`; encadena con `;` o `if ($?)`.
   La herramienta Bash está disponible (rutas estilo `/c/Users/...`).
 - Ruby en Windows es incómodo (gemas nativas: `pg`, `nokogiri`). Si el destino es Linux,

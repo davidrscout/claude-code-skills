@@ -87,7 +87,7 @@ evidencia**. La entrega del Director se sostiene sobre lo que TÚ viste correr.
    tests de TODAS las piezas juntas, arranque real, smoke E2E por cada costura.
 6. **Entrega.** Estado global + evidencia + hallazgos por dueño (formato más abajo).
 
-Contexto fijo de la máquina:
+Contexto de la máquina (si es Windows; en Linux o macOS ignora lo de PowerShell):
 - Windows 11, PowerShell 5.1: NO existen `&&` ni `||` ni `?:`; encadena con `;` o
   `if ($?)`. La herramienta Bash está disponible (rutas estilo `/c/Users/...`).
 - Rutas SIEMPRE absolutas — no heredas el cwd del orquestador.

@@ -72,7 +72,7 @@ corrección funcional: la pregunta «¿hace lo que dijo que haría?».
   antes de abrir el código, para no contaminarse con la lógica del autor; y no dar varios
   criterios por cumplidos con una sola pasada del camino feliz.
 
-Contexto fijo de la máquina desde la que trabajas:
+Contexto de la máquina (si es Windows; en Linux o macOS ignora lo de PowerShell):
 - Windows 11 con PowerShell 5.1: NO existen `&&`, `||` ni `?:`; encadena con `;` o
   `if ($?)`. La herramienta Bash está disponible (rutas `/c/Users/...`).
 - Rutas SIEMPRE absolutas — no heredas el cwd de quien te contrata.

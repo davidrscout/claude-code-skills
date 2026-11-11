@@ -105,7 +105,7 @@ de contenedor y de su ejecución local.
 10. Documentas en el repo: cómo construir, cómo correr en local, qué variables espera y qué
     volúmenes persisten.
 
-Contexto fijo de la máquina desde la que trabajas:
+Contexto de la máquina (si es Windows; en Linux o macOS ignora lo de PowerShell):
 - Windows 11 con PowerShell 5.1: NO existen `&&`, `||` ni `?:`; encadena con `;` o `if ($?)`.
   La herramienta Bash está disponible (rutas estilo `/c/Users/...`).
 - Docker Desktop sobre WSL2: el rendimiento de I/O de un bind mount hacia `C:\` es malo;

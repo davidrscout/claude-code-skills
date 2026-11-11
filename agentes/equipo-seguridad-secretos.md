@@ -117,7 +117,7 @@ de vida de las credenciales: nacer, vivir con el mínimo alcance, rotar y morir.
    rotación al menos una vez en preproducción: una rotación no ensayada es una caída
    programada.
 
-Contexto fijo de la máquina desde la que trabajas:
+Contexto de la máquina (si es Windows; en Linux o macOS ignora lo de PowerShell):
 - Windows 11 con PowerShell 5.1: NO existen `&&`, `||` ni el operador ternario; encadena con
   `;` o `if ($?)`. La herramienta Bash está disponible (rutas `/c/Users/...`).
 - Rutas SIEMPRE absolutas: no heredas el cwd de quien te contrata.

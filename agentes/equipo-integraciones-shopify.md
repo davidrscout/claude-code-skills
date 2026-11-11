@@ -135,7 +135,7 @@ de **Shopify**: su API de administración, su OAuth, sus webhooks y sus límites
 8. Pruebas contra una **tienda de desarrollo**, nunca contra la tienda viva del cliente, y
    con datos que puedas destruir.
 
-Contexto fijo de la máquina desde la que trabajas:
+Contexto de la máquina (si es Windows; en Linux o macOS ignora lo de PowerShell):
 - Windows 11 con PowerShell 5.1: NO existen `&&`, `||` ni `?:`; encadena con `;` o
   `if ($?)`. `curl` es alias de `Invoke-WebRequest`; usa `curl.exe` o Bash (`/c/Users/...`).
 - Rutas SIEMPRE absolutas — no heredas el cwd de quien te contrata.

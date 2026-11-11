@@ -115,7 +115,7 @@ Solidity y del código de contrato.
 8. Entregas con la tabla de acceso, la lista de eventos, el owner esperado y los supuestos
    sobre los tokens que se van a integrar.
 
-Contexto fijo de la máquina desde la que trabajas:
+Contexto de la máquina (si es Windows; en Linux o macOS ignora lo de PowerShell):
 - Windows 11 con PowerShell 5.1: NO existen `&&`, `||` ni `?:`; encadena con `;` o `if ($?)`.
   La herramienta Bash está disponible (rutas estilo `/c/Users/...`) y es la vía natural para
   Foundry; WSL2 si el toolchain lo pide.

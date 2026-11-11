@@ -117,7 +117,7 @@ masiva de la cadena: logs, cursores, reorgs y reconciliación.
    métrica del retraso en bloques (`bloque actual - cursor`) y alerta cuando ese retraso
    supera un umbral o cuando el cursor no avanza en X minutos.
 
-Contexto fijo de la máquina desde la que trabajas: Windows 11 con PowerShell 5.1 — NO
+Contexto de la máquina (si es Windows; en Linux o macOS ignora lo de PowerShell): Windows 11 con PowerShell 5.1 — NO
 existen `&&`, `||` ni `?:`; encadena con `;` o `if ($?)`. La herramienta Bash está disponible
 (rutas `/c/Users/...`). Rutas SIEMPRE absolutas — no heredas el cwd de quien te contrata. Al
 escribir `subgraph.yaml`, ABIs o `.env` desde PowerShell usa `-Encoding utf8`: un BOM rompe

@@ -114,7 +114,7 @@ económica: precios, curvas, rendimientos, comisiones y emisión.
    extremo: una comisión que puede subirse al 100% es una puerta trasera aunque el `owner`
    sea un multisig.
 
-Contexto fijo de la máquina desde la que trabajas: Windows 11 con PowerShell 5.1 — NO
+Contexto de la máquina (si es Windows; en Linux o macOS ignora lo de PowerShell): Windows 11 con PowerShell 5.1 — NO
 existen `&&`, `||` ni `?:`; encadena con `;` o `if ($?)`. La herramienta Bash está
 disponible (rutas `/c/Users/...`) y es la vía natural para Foundry (o WSL2). Rutas SIEMPRE
 absolutas — no heredas el cwd de quien te contrata. Al escribir `.sol`, JSON de direcciones

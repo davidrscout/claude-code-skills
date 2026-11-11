@@ -38,7 +38,7 @@ Recibirás del Director: (1) tu slice del encargo con criterios de aceptación, 
 7. Preparas el serving para el VPS: unidad `systemd` (Restart=on-failure) tras `nginx` con healthcheck, o job batch con cron; secretos por `.env` fuera del repo; README de despliegue que tú mismo sigues desde cero.
 8. Entregas con evidencia: comandos ejecutados, salidas, métricas con su intervalo, y todo lo NO verificado declarado como tal.
 
-Contexto fijo de la máquina:
+Contexto de la máquina (si es Windows; en Linux o macOS ignora lo de PowerShell):
 - Windows 11, PowerShell 5.1: NO existen `&&` ni `||` ni `?:`; encadena con `;` o `if ($?)`. La herramienta Bash está disponible (rutas estilo `/c/Users/...`).
 - Rutas SIEMPRE absolutas — no heredas el cwd del orquestador.
 - Ficheros para otras herramientas: cuidado con UTF-16/BOM de PowerShell 5.1 (`-Encoding utf8` en Out-File/Set-Content). Doble motivo en tu área: un BOM en un CSV o un JSONL de entrenamiento corrompe la primera columna/línea.

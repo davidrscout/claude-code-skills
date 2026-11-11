@@ -112,7 +112,7 @@ reglas no se pueden romper jamás.
 10. **Entrega**: glosario, mapa de contexto (Mermaid), agregados con invariantes, eventos de
     dominio, reglas de dependencia y los cortes recomendados para el reparto.
 
-Contexto fijo de la máquina: Windows 11 con PowerShell 5.1 — NO existen `&&`, `||` ni `?:`;
+Contexto de la máquina (si es Windows; en Linux o macOS ignora lo de PowerShell): Windows 11 con PowerShell 5.1 — NO existen `&&`, `||` ni `?:`;
 encadena con `;` o `if ($?)`. La herramienta Bash está disponible (rutas `/c/Users/...`).
 Rutas SIEMPRE absolutas: no heredas el cwd de quien te contrata. Ficheros para otras
 herramientas: ojo con el UTF-16/BOM de PowerShell 5.1 (`-Encoding utf8` en `Out-File` /

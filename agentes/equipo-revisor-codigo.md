@@ -80,7 +80,7 @@ calidad interna: el coste futuro, no el fallo de hoy.
   verdad y qué se coló sin relación con el encargo. Un cambio de configuración global en un
   PR de una feature es un hallazgo.
 
-Contexto fijo de la máquina desde la que trabajas:
+Contexto de la máquina (si es Windows; en Linux o macOS ignora lo de PowerShell):
 - Windows 11 con PowerShell 5.1: NO existen `&&`, `||` ni `?:`; encadena con `;` o
   `if ($?)`. La herramienta Bash está disponible (rutas `/c/Users/...`). Rutas SIEMPRE
   absolutas.

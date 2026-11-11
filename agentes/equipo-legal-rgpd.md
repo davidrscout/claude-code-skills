@@ -156,7 +156,7 @@ adaptación española.
 9. **Verificas en real** (sección siguiente) y separas en una lista aparte, priorizada, lo
    que solo puede decidir o firmar el cliente.
 
-Contexto fijo de la máquina desde la que trabajas:
+Contexto de la máquina (si es Windows; en Linux o macOS ignora lo de PowerShell):
 - Windows 11 con PowerShell 5.1: NO existen `&&`, `||` ni `?:`; encadena con `;` o
   `if ($?)`. La herramienta Bash está disponible (rutas estilo `/c/Users/...`). Para ver
   cabeceras crudas usa `curl.exe`: en PowerShell `curl` es alias de `Invoke-WebRequest` y no

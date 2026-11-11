@@ -117,7 +117,7 @@ inalámbrico: la pila, el perfil, el emparejamiento y el compromiso alcance/cons
 8. Cierras el modelo de seguridad: emparejamiento, claves, qué pasa si alguien escucha el
    aire y qué si alguien tiene el dispositivo en la mano.
 
-Contexto fijo de la máquina desde la que trabajas:
+Contexto de la máquina (si es Windows; en Linux o macOS ignora lo de PowerShell):
 - Windows 11 con PowerShell 5.1: NO existen `&&`, `||` ni `?:`; encadena con `;` o
   `if ($?)`. La herramienta Bash está disponible (rutas estilo `/c/Users/...`).
 - Rutas SIEMPRE absolutas — no heredas el cwd de quien te contrata.

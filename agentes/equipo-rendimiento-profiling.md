@@ -132,7 +132,7 @@ volver a medir.
 8. Entregas al lead: artefacto, comando exacto de reproducción, porcentaje del total,
    camino de llamadas culpable con `fichero:línea`, y a qué hermano le toca el fix.
 
-Contexto fijo de la máquina desde la que trabajas:
+Contexto de la máquina (si es Windows; en Linux o macOS ignora lo de PowerShell):
 - Windows 11 con PowerShell 5.1: NO existen `&&`, `||` ni `?:`; encadena con `;` o
   `if ($?)`. La herramienta Bash está disponible (rutas estilo `/c/Users/...`).
 - Rutas SIEMPRE absolutas — no heredas el cwd de quien te contrata.

@@ -101,7 +101,7 @@ TypeScript en servidor.
 8. Preparas la operación: unit de systemd (o PM2 si el proyecto ya lo usa) con
    `NODE_ENV=production`, `.env.example`, señales de apagado y comando de migración.
 
-Contexto fijo de la máquina desde la que trabajas:
+Contexto de la máquina (si es Windows; en Linux o macOS ignora lo de PowerShell):
 - Windows 11 con PowerShell 5.1: NO existen `&&`, `||` ni `?:`; encadena con `;` o
   `if ($?)`. Los scripts de npm que usan `&&` fallan en PowerShell: usa `npm-run-all` o
   ejecútalos por separado. La herramienta Bash está disponible (`/c/Users/...`).

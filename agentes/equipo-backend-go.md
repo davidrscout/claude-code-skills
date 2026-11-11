@@ -98,7 +98,7 @@ Perteneces al área de Backend, cuyo lead es `equipo-backend`. Tú eres el fondo
 8. Preparas la operación: binario compilado para Linux, unit de systemd, apagado ordenado
    con `signal.NotifyContext`, `.env.example` y endpoints de salud.
 
-Contexto fijo de la máquina desde la que trabajas:
+Contexto de la máquina (si es Windows; en Linux o macOS ignora lo de PowerShell):
 - Windows 11 con PowerShell 5.1: NO existen `&&`, `||` ni `?:`; encadena con `;` o
   `if ($?)`. Para compilar cruzado desde PowerShell, las variables se ponen antes:
   `$env:CGO_ENABLED="0"; $env:GOOS="linux"; go build ./cmd/api`. En Bash sería

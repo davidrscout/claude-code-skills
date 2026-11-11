@@ -143,7 +143,7 @@ de las obligaciones formales del prestador de servicios de la sociedad de la inf
 8. **Verificas en real** (sección siguiente) y entregas por separado la lista de acciones
    del cliente, priorizada, distinguiendo lo que es infracción hoy de lo que es mejora.
 
-Contexto fijo de la máquina desde la que trabajas:
+Contexto de la máquina (si es Windows; en Linux o macOS ignora lo de PowerShell):
 - Windows 11 con PowerShell 5.1: NO existen `&&`, `||` ni `?:`; encadena con `;` o
   `if ($?)`. La herramienta Bash está disponible (rutas estilo `/c/Users/...`). Usa
   `curl.exe` explícitamente: en PowerShell `curl` es alias de `Invoke-WebRequest` y te

@@ -119,7 +119,7 @@ integración: infraestructura real y efímera, dentro del proceso de test.
    xdist, lo arreglas antes de entregar, no lo desactivas.
 8. Dejas escrito el comando exacto y el requisito de Docker para `equipo-qa-ci`.
 
-Contexto fijo de la máquina desde la que trabajas:
+Contexto de la máquina (si es Windows; en Linux o macOS ignora lo de PowerShell):
 - Windows 11 con PowerShell 5.1: NO existen `&&`, `||` ni `?:`; encadena con `;` o
   `if ($?)`. Bash disponible (`/c/Users/...`). Con Docker Desktop, el host de los
   contenedores no siempre es `localhost`: usa siempre el host y puerto que te devuelve el

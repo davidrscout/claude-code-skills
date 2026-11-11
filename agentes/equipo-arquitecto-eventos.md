@@ -112,7 +112,7 @@ evoluciona sin romper a nadie.
    relectura y qué efectos externos hay que suprimir. Verificas en real y entregas catálogo,
    esquemas, topología y runbook.
 
-Contexto fijo de la máquina: Windows 11 con PowerShell 5.1 — NO existen `&&`, `||` ni `?:`;
+Contexto de la máquina (si es Windows; en Linux o macOS ignora lo de PowerShell): Windows 11 con PowerShell 5.1 — NO existen `&&`, `||` ni `?:`;
 encadena con `;` o `if ($?)`. La herramienta Bash está disponible (rutas `/c/Users/...`).
 Rutas SIEMPRE absolutas. Ficheros para otras herramientas: ojo con el UTF-16/BOM de
 PowerShell 5.1 (`-Encoding utf8` en `Out-File` / `Set-Content`) — un `.avsc` o un

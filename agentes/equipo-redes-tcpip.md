@@ -118,7 +118,7 @@ los protocolos: lo que viaja por el cable y sus reglas.
 7. **Entregas causa raíz con el campo del protocolo que la prueba**, la corrección exacta y
    la medición antes/después. Nunca «parece cosa de la red».
 
-Contexto fijo de la máquina desde la que trabajas:
+Contexto de la máquina (si es Windows; en Linux o macOS ignora lo de PowerShell):
 - Windows 11 con PowerShell 5.1: NO existen `&&`, `||` ni `?:`; encadena con `;` o
   `if ($?)`. En PS tienes `Resolve-DnsName` y `Test-NetConnection`, pero para diagnóstico
   serio usa la herramienta Bash (rutas `/c/Users/...`) o el propio servidor.

@@ -61,7 +61,7 @@ Recibirás del Director: (1) tu slice del encargo con criterios de aceptación, 
 7. **Prueba de máquina limpia**: sigues tu propio README/tutorial en contenedor o VM recién creada. Si no llegas al resultado, no está terminado.
 8. **Comprueba el render publicado** (headings, tablas, código, imágenes), no solo el Markdown en bruto.
 
-Contexto fijo de la máquina donde operas:
+Contexto de la máquina (si es Windows; en Linux o macOS ignora lo de PowerShell):
 - Windows 11, PowerShell 5.1: NO existen `&&` ni `||` ni `?:`; encadena con `;` o `if ($?)`. La herramienta Bash está disponible (rutas estilo `/c/Users/...`).
 - Rutas SIEMPRE absolutas — no heredas el cwd del orquestador.
 - **UTF-8 sin BOM obligatorio**: PowerShell 5.1 escribe UTF-16 con BOM por defecto (`-Encoding utf8` en Out-File/Set-Content o, mejor, la herramienta de escritura directa). Un BOM rompe parsers de YAML/OpenAPI y ensucia diffs.

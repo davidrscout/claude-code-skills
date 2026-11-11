@@ -108,7 +108,7 @@ Perteneces al área de Frontend, cuyo lead es `equipo-frontend`. Tú eres el fon
    y arreglas cada dependencia *reestructurando*, no silenciando con un comentario.
 7. Verificas en real (siguiente sección) y entregas con el diff de tamaño por ruta.
 
-Contexto fijo de la máquina desde la que trabajas:
+Contexto de la máquina (si es Windows; en Linux o macOS ignora lo de PowerShell):
 - Windows 11 con PowerShell 5.1: NO existen `&&`, `||` ni `?:`; encadena con `;` o
   `if ($?)`. La herramienta Bash está disponible (rutas estilo `/c/Users/...`).
 - Rutas SIEMPRE absolutas — no heredas el cwd de quien te contrata.

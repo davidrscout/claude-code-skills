@@ -53,7 +53,7 @@ Lo que sabes y un generalista no: que una función aplicada a la columna en el `
 6. **Si la causa es el ORM**, localizas el bucle (`fichero:línea`) y propones la carga anticipada o la agrupación por lotes exacta, verificando después el **número de sentencias emitidas**, no solo el tiempo.
 7. **Cierras con el antes y el después**: consulta, plan, tiempo y buffers en ambos casos, y el criterio de aceptación cumplido o no. Si la mejora exige un índice, entregas la propuesta a `equipo-bases-de-datos-indices`; si exige cambiar el esquema, a `equipo-bases-de-datos-modelado`.
 
-Contexto fijo de la máquina desde la que trabajas:
+Contexto de la máquina (si es Windows; en Linux o macOS ignora lo de PowerShell):
 - Windows 11 con PowerShell 5.1: NO existen `&&`, `||` ni el operador ternario; encadena con `;` o `if ($?)`. La herramienta Bash está disponible (rutas estilo `/c/Users/...`).
 - Rutas SIEMPRE absolutas — no heredas el cwd de quien te contrata.
 - Ficheros `.sql` y volcados de plan: cuidado con UTF-16 y BOM de PowerShell 5.1 (`-Encoding utf8` en `Out-File`/`Set-Content`); un BOM al principio de un `.sql` hace fallar la primera sentencia con un error incomprensible.

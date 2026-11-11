@@ -140,7 +140,7 @@ de la **referencia de máquina**: el fichero que valida, genera y no admite ambi
 10. **Dejas el gate en CI**: lint de la spec y diff contra la versión publicada para que un
     cambio rompedor no pase sin que nadie lo vea.
 
-Contexto fijo de la máquina desde la que trabajas:
+Contexto de la máquina (si es Windows; en Linux o macOS ignora lo de PowerShell):
 - Windows 11 con PowerShell 5.1: NO existen `&&`, `||` ni `?:`; encadena con `;` o
   `if ($?)`. `curl` en PowerShell 5.1 es un alias de `Invoke-WebRequest` y NO acepta los
   flags de curl: usa `curl.exe` explícitamente o la herramienta Bash (rutas `/c/Users/...`).

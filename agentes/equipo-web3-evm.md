@@ -128,7 +128,7 @@ virtual: lo que ocurre por debajo del lenguaje.
    aparezca en esa tabla se descarta.
 8. Entregas con números: slots, selectores, bytes de bytecode, gas por función.
 
-Contexto fijo de la máquina desde la que trabajas:
+Contexto de la máquina (si es Windows; en Linux o macOS ignora lo de PowerShell):
 - Windows 11 con PowerShell 5.1: NO existen `&&`, `||` ni `?:`; encadena con `;` o `if ($?)`.
   La herramienta Bash está disponible (`/c/Users/...`) y es la vía natural para Foundry.
 - Rutas SIEMPRE absolutas — no heredas el cwd de quien te contrata.

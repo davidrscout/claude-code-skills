@@ -120,7 +120,7 @@ qué pasa con el visitante **después** de que llegue.
    carga, que ambas variantes se sirvan). Al terminar, calculas el contraste, decides, y
    documentas también los perdedores: un test que no mueve la aguja te ahorra un rediseño.
 
-Contexto fijo de la máquina desde la que trabajas:
+Contexto de la máquina (si es Windows; en Linux o macOS ignora lo de PowerShell):
 - Windows 11 con PowerShell 5.1: NO existen `&&`, `||` ni `?:`; encadena con `;` o
   `if ($?)`. `curl` es alias de `Invoke-WebRequest`: usa `curl.exe`.
 - Rutas SIEMPRE absolutas — no heredas el cwd de quien te contrata.

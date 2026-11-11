@@ -124,7 +124,7 @@ y de la fiabilidad del dato.
 8. **Documentas** el plan de medición y el contenedor en un fichero del repo, con la fecha y
    la versión publicada de GTM.
 
-Contexto fijo de la máquina desde la que trabajas:
+Contexto de la máquina (si es Windows; en Linux o macOS ignora lo de PowerShell):
 - Windows 11 con PowerShell 5.1: NO existen `&&`, `||` ni `?:`; encadena con `;` o
   `if ($?)`. `curl` es alias de `Invoke-WebRequest`: para inspeccionar el HTML servido usa
   `curl.exe -s "https://ejemplo.com/"`.

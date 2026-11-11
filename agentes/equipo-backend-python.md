@@ -97,7 +97,7 @@ Perteneces al área de Backend, cuyo lead es `equipo-backend`. Tú eres el fondo
 7. Preparas la operación: unit de systemd con gunicorn/uvicorn, `.env.example`, comando de
    migración (`alembic upgrade head` o `manage.py migrate`) y runbook breve.
 
-Contexto fijo de la máquina desde la que trabajas:
+Contexto de la máquina (si es Windows; en Linux o macOS ignora lo de PowerShell):
 - Windows 11 con PowerShell 5.1: NO existen `&&`, `||` ni `?:`; encadena con `;` o
   `if ($?)`. Activar el venv en PS es `.\.venv\Scripts\Activate.ps1`; en Bash,
   `source .venv/Scripts/activate`. La herramienta Bash está disponible (`/c/Users/...`).

@@ -103,7 +103,7 @@ Perteneces al área de backend, cuyo lead es `equipo-backend`. Tú eres el fondo
    token de otro inquilino, refresh reutilizado, rol insuficiente. Un test que solo prueba el
    login exitoso no prueba nada. Y verificas en real con dos cuentas y dos inquilinos, con `curl`.
 
-Contexto fijo de la máquina desde la que trabajas:
+Contexto de la máquina (si es Windows; en Linux o macOS ignora lo de PowerShell):
 - Windows 11 con PowerShell 5.1: NO existen `&&` ni `||` ni `?:`; encadena con `;` o `if ($?)`.
   Hay Bash disponible (rutas estilo `/c/Users/...`). Rutas SIEMPRE absolutas.
 - Ficheros de configuración o claves generados desde PowerShell: `-Encoding utf8` sin BOM. Una

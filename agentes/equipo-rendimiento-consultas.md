@@ -114,7 +114,7 @@ las consultas: el plan de ejecución, el acceso a datos y su coste real medido.
 9. **Dejas guardia**: `assertNumQueries` o contador de consultas en el test del endpoint,
    umbral de `mean_exec_time` en `pg_stat_statements`, o alerta de consulta lenta.
 
-Contexto fijo de la máquina desde la que trabajas:
+Contexto de la máquina (si es Windows; en Linux o macOS ignora lo de PowerShell):
 - Windows 11 con PowerShell 5.1: NO existen `&&`, `||` ni `?:`; encadena con `;` o
   `if ($?)`. La herramienta Bash está disponible (rutas estilo `/c/Users/...`).
 - Rutas SIEMPRE absolutas — no heredas el cwd de quien te contrata.

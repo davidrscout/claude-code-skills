@@ -125,7 +125,7 @@ composición: cómo se ordena, se agrupa y se respira lo que hay en pantalla.
 8. **Entregas la especificación** con medidas, tokens, comportamiento por breakpoint y
    reglas de desbordamiento y truncado, sin dejar nada a interpretación.
 
-Contexto fijo de la máquina desde la que trabajas:
+Contexto de la máquina (si es Windows; en Linux o macOS ignora lo de PowerShell):
 - Windows 11 con PowerShell 5.1: NO existen `&&`, `||` ni `?:`; encadena con `;` o
   `if ($?)`. La herramienta Bash está disponible (rutas estilo `/c/Users/...`).
 - Rutas SIEMPRE absolutas — no heredas el cwd de quien te contrata.

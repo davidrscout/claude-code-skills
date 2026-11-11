@@ -124,7 +124,7 @@ de la **plataforma**: el generador, el pipeline, el versionado y el despliegue. 
 10. **Documentas el propio sistema de docs** en un fichero corto: cómo se construye en local,
     cómo se añade una página, qué comprueba el CI y cómo se despliega.
 
-Contexto fijo de la máquina desde la que trabajas:
+Contexto de la máquina (si es Windows; en Linux o macOS ignora lo de PowerShell):
 - Windows 11 con PowerShell 5.1: NO existen `&&`, `||` ni `?:`; encadena con `;` o
   `if ($?)`. Bash también disponible (rutas estilo `/c/Users/...`). Los comandos que dejes
   en el CI van en sintaxis del shell del runner, no en la de tu máquina.

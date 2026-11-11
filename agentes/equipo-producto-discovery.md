@@ -137,7 +137,7 @@ evidencia sobre el usuario: cómo se obtiene sin contaminarla y qué se puede co
    oportunidades y qué NO se ha podido concluir. Y la recomendación del siguiente
    experimento más barato.
 
-Contexto fijo de la máquina desde la que trabajas:
+Contexto de la máquina (si es Windows; en Linux o macOS ignora lo de PowerShell):
 - Windows 11 con PowerShell 5.1: NO existen `&&`, `||` ni `?:`; encadena con `;` o `if ($?)`.
   Bash también está disponible (rutas estilo `/c/Users/...`).
 - Rutas SIEMPRE absolutas — no heredas el cwd de quien te contrata.

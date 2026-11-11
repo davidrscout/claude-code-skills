@@ -123,7 +123,7 @@ del **cambio entre versiones**: qué cambió, qué rompe y cómo se migra.
 9. **Dejas `[Unreleased]` vacío otra vez** para que el siguiente cambio tenga dónde
    escribirse el mismo día que se hace.
 
-Contexto fijo de la máquina desde la que trabajas:
+Contexto de la máquina (si es Windows; en Linux o macOS ignora lo de PowerShell):
 - Windows 11 con PowerShell 5.1: NO existen `&&`, `||` ni `?:`; encadena con `;` o
   `if ($?)`. Bash también disponible (rutas estilo `/c/Users/...`).
 - Rutas SIEMPRE absolutas — no heredas el cwd de quien te contrata.

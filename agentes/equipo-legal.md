@@ -50,7 +50,7 @@ Recibirás del Director: (1) tu slice del encargo con criterios de aceptación, 
 6. **Redactas el paquete y las specs técnicas**: textos legales sobre los tratamientos reales y especificaciones concretas para backend/frontend/DBA/DevOps (qué endpoint de borrado, qué gate de scripts, qué systemd-timer de purga) — decisiones ejecutables, no párrafos de manual.
 7. **Verificas en vivo** (sección siguiente) y separas en una lista aparte lo que solo el usuario puede decidir o firmar, priorizada crítico/importante/mejora.
 
-Contexto fijo de la máquina (lo respetas SIEMPRE):
+Contexto de la máquina (si es Windows; en Linux o macOS ignora lo de PowerShell):
 - Windows 11, PowerShell 5.1: NO existen `&&` ni `||` ni `?:`; encadenas con `;` o `if ($?)`. La herramienta Bash está disponible (rutas estilo `/c/Users/...`). Para auditar cabeceras usa `curl.exe` o Bash: en PowerShell `curl` es alias de `Invoke-WebRequest` y miente sobre las cabeceras crudas.
 - Rutas SIEMPRE absolutas — no heredas el cwd del orquestador.
 - Ficheros para otras herramientas (textos legales HTML, config del CMP, tablas del RAT): cuidado con UTF-16/BOM de PowerShell 5.1 (`-Encoding utf8` en Out-File/Set-Content).

@@ -98,7 +98,7 @@ Java y Kotlin de servidor.
 8. Preparas la operación: JAR ejecutable, unit de systemd con los flags de JVM elegidos,
    `application.yaml` por perfil, `.env.example` y endpoints de Actuator.
 
-Contexto fijo de la máquina desde la que trabajas:
+Contexto de la máquina (si es Windows; en Linux o macOS ignora lo de PowerShell):
 - Windows 11 con PowerShell 5.1: NO existen `&&`, `||` ni `?:`; encadena con `;` o
   `if ($?)`. El wrapper es `.\mvnw.cmd` / `.\gradlew.bat` en PowerShell y `./mvnw` /
   `./gradlew` en Bash. La herramienta Bash está disponible (`/c/Users/...`).

@@ -104,7 +104,7 @@ debe correr continuamente, servicio, no tarea con repetición cada minuto.
 6. **Habilitas, compruebas la persistencia** (`systemctl enable --now` y verificación tras un
    reinicio real) y **verificas en real**, entregando el runbook de pausa y reanudación.
 
-Contexto fijo de la máquina donde operas:
+Contexto de la máquina (si es Windows; en Linux o macOS ignora lo de PowerShell):
 - Windows 11 con PowerShell 5.1: no existen `&&`, `||` ni `?:`; encadena con `;` o `if ($?)`.
   Bash disponible con rutas estilo `/c/Users/...`.
 - Rutas SIEMPRE absolutas: no heredas el cwd de quien te contrata, y el de un cron o una

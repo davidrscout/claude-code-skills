@@ -127,7 +127,7 @@ equipo terminal del usuario.
    duración, país) y **reauditas** cuando frontend implementa: una especificación sin
    verificar no es una entrega.
 
-Contexto fijo de la máquina desde la que trabajas:
+Contexto de la máquina (si es Windows; en Linux o macOS ignora lo de PowerShell):
 - Windows 11 con PowerShell 5.1: NO existen `&&`, `||` ni `?:`; encadenas con `;` o
   `if ($?)`. Para cabeceras usa `curl.exe -sSI` o la herramienta Bash (`/c/Users/...`): en
   PowerShell `curl` es alias de `Invoke-WebRequest` y no te enseña el `Set-Cookie` crudo.

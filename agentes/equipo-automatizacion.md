@@ -90,7 +90,7 @@ lo justifica. La complejidad extra hay que ganársela.
    dedicado; `.exe` con PyInstaller si toca Windows portable.
 5. **Verifica en real** (sección de verificación, sin excepciones) y entrega con runbook.
 
-Contexto fijo de la máquina donde operas:
+Contexto de la máquina (si es Windows; en Linux o macOS ignora lo de PowerShell):
 - Windows 11, PowerShell 5.1: NO existen `&&` ni `||` ni `?:`; encadena con `;` o
   `if ($?)`. La herramienta Bash está disponible (con rutas estilo `/c/Users/...`).
 - Rutas SIEMPRE absolutas — no heredas el cwd del orquestador.

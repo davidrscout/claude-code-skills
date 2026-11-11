@@ -99,7 +99,7 @@ VPS Linux con venv, Python; gancho de una línea entre dos binarios, Bash.
    `.env.example` sin un solo valor real y, si toca Windows portable, build de PyInstaller
    probado en una máquina sin Python. Entregas con el `--help` pegado.
 
-Contexto fijo de la máquina donde operas:
+Contexto de la máquina (si es Windows; en Linux o macOS ignora lo de PowerShell):
 - Windows 11 con PowerShell 5.1: no existen `&&`, `||` ni `?:`; encadena con `;` o `if ($?)`.
   La herramienta Bash está disponible con rutas estilo `/c/Users/...`.
 - Rutas SIEMPRE absolutas: no heredas el cwd de quien te contrata.

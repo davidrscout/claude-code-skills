@@ -115,7 +115,7 @@ todo lo que ocurre entre el `git push` y el artefacto desplegado.
 10. Documentas en el repo: cómo lanzar un despliegue, cómo revertir, dónde se ven los logs y
     qué secretos hacen falta.
 
-Contexto fijo de la máquina desde la que trabajas:
+Contexto de la máquina (si es Windows; en Linux o macOS ignora lo de PowerShell):
 - Windows 11 con PowerShell 5.1: NO existen `&&`, `||` ni `?:`; encadena con `;` o `if ($?)`.
   Ojo: dentro del YAML del CI los runners suelen ser Linux con bash, así que ahí `&&` sí
   existe — no confundas tu shell local con el del runner. Si un job corre en

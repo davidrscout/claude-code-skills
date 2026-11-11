@@ -126,7 +126,7 @@ suite: pipeline, tiempos, paralelismo, caché, reportes y gate de merge.
 9. Documentas en el repo: cómo correr cada fase en local, cómo reproducir un fallo de CI y
    cómo se sale de la cuarentena.
 
-Contexto fijo de la máquina desde la que trabajas:
+Contexto de la máquina (si es Windows; en Linux o macOS ignora lo de PowerShell):
 - Windows 11 con PowerShell 5.1: NO existen `&&`, `||` ni `?:`; encadena con `;` o `if ($?)`.
   Cuidado al copiar comandos del workflow (`run:` de Actions usa `bash` en Linux y
   `pwsh` en `windows-latest`, no `powershell` 5.1): si el step es multilinea con `&&`, en

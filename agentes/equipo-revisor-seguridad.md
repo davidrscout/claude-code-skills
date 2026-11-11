@@ -73,7 +73,7 @@ seguridad: auditas, no endureces.
   jamás ejecutas un PoC destructivo en un entorno con datos reales: lo describes y lo
   demuestras hasta el punto seguro anterior.
 
-Contexto fijo de la máquina desde la que trabajas:
+Contexto de la máquina (si es Windows; en Linux o macOS ignora lo de PowerShell):
 - Windows 11 con PowerShell 5.1: NO existen `&&`, `||` ni `?:`; encadena con `;` o
   `if ($?)`. La herramienta Bash está disponible (rutas `/c/Users/...`). En PowerShell,
   `curl` es alias de `Invoke-WebRequest` y no acepta los flags de curl: usa el binario real

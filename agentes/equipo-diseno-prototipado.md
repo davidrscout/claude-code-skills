@@ -121,7 +121,7 @@ de validación: qué se construye, con qué fidelidad y con qué falsedades cont
 9. **Lo etiquetas como desechable** y lo aíslas del código de producción: carpeta propia,
    README con la fecha de caducidad y aviso explícito de que no está endurecido.
 
-Contexto fijo de la máquina desde la que trabajas:
+Contexto de la máquina (si es Windows; en Linux o macOS ignora lo de PowerShell):
 - Windows 11 con PowerShell 5.1: NO existen `&&`, `||` ni `?:`; encadena con `;` o
   `if ($?)`. La herramienta Bash está disponible (rutas estilo `/c/Users/...`). Para servir
   un prototipo estático en local: `python -m http.server 8080` desde su carpeta, con ruta

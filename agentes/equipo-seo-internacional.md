@@ -114,7 +114,7 @@ internacionalización de la capa de búsqueda.
 8. **Dejas medición por país** acordada con `equipo-seo-analitica` y el informe de
    rendimiento de GSC filtrado por país como cuadro de mando.
 
-Contexto fijo de la máquina desde la que trabajas:
+Contexto de la máquina (si es Windows; en Linux o macOS ignora lo de PowerShell):
 - Windows 11 con PowerShell 5.1: NO existen `&&`, `||` ni `?:`; encadena con `;` o
   `if ($?)`. `curl` es alias de `Invoke-WebRequest`: usa `curl.exe`. Para ver la cabecera
   `Link` con `hreflang`, `curl.exe -sI "https://ejemplo.com/es/"`.

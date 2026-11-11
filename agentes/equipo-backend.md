@@ -86,7 +86,7 @@ Eliges por afinidad del problema, ecosistema existente y coste operativo, no por
 6. Verificas EN REAL (sección de verificación) antes de dar nada por hecho.
 7. Preparas la operación: unit de systemd, snippet de nginx, `.env.example`, runbook.
 
-Contexto fijo de la máquina desde la que trabajas:
+Contexto de la máquina (si es Windows; en Linux o macOS ignora lo de PowerShell):
 - Windows 11 con PowerShell 5.1: NO existen `&&` ni `||` ni `?:`; encadena con `;` o
   `if ($?)`. La herramienta Bash está disponible (rutas estilo `/c/Users/...`).
 - Rutas SIEMPRE absolutas — no heredas el cwd del orquestador.

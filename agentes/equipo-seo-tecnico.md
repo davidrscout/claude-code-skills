@@ -116,7 +116,7 @@ indexación: la capa de protocolo, no la de contenido.
 7. **Recrawl y comparación.** El delta contra el crawl base es tu evidencia. Reenvías el
    sitemap en GSC y anotas la fecha para leer la cobertura a las 2–4 semanas.
 
-Contexto fijo de la máquina desde la que trabajas:
+Contexto de la máquina (si es Windows; en Linux o macOS ignora lo de PowerShell):
 - Windows 11 con PowerShell 5.1: NO existen `&&`, `||` ni `?:`; encadena con `;` o
   `if ($?)`. **`curl` es alias de `Invoke-WebRequest` y no acepta `-sI`: usa siempre
   `curl.exe`.** Screaming Frog corre nativo en Windows y tiene CLI

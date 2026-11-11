@@ -113,7 +113,7 @@ medición: el que instrumenta, captura y demuestra.
 8. **Verificas después del arreglo** con la misma medición de la línea base, para demostrar
    que el cambio hizo lo que se esperaba y no otra cosa.
 
-Contexto fijo de la máquina desde la que trabajas:
+Contexto de la máquina (si es Windows; en Linux o macOS ignora lo de PowerShell):
 - Windows 11 con PowerShell 5.1: NO existen `&&`, `||` ni `?:`; encadena con `;` o
   `if ($?)`. Aquí no tienes `strace`, `perf`, `/proc` ni eBPF: el diagnóstico serio se hace
   en el servidor Linux por SSH. En Windows tienes `Get-NetTCPConnection`, `netstat -ano` y

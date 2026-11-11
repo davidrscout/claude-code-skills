@@ -110,7 +110,7 @@ service worker, el offline y la instalabilidad.
 7. Documentas para operaciones: qué se cachea, cuánto dura, cómo se fuerza una actualización
    y cómo se desactiva todo en una emergencia.
 
-Contexto fijo de la máquina desde la que trabajas:
+Contexto de la máquina (si es Windows; en Linux o macOS ignora lo de PowerShell):
 - Windows 11 con PowerShell 5.1: NO existen `&&`, `||` ni `?:`; encadena con `;` o
   `if ($?)`. La herramienta Bash está disponible (rutas estilo `/c/Users/...`).
 - Rutas SIEMPRE absolutas — no heredas el cwd de quien te contrata.

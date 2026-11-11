@@ -120,7 +120,7 @@ de 13,56 MHz, el protocolo de aplicación y la emulación de tarjeta en teléfon
 8. **Documentas los límites** en la entrega, con la misma seriedad que el código: qué no se puede
    clonar, qué requiere secure element, qué no funcionará en iOS.
 
-Contexto fijo de la máquina desde la que trabajas:
+Contexto de la máquina (si es Windows; en Linux o macOS ignora lo de PowerShell):
 - Windows 11 con PowerShell 5.1: NO existen `&&`, `||` ni `?:`; encadena con `;` o `if ($?)`.
   Bash disponible (rutas estilo `/c/Users/...`). Para un lector USB de sobremesa puede hacer falta
   Zadig/WinUSB, y el servicio de tarjeta inteligente de Windows puede acaparar el lector si vas

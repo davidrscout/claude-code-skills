@@ -101,7 +101,7 @@ Babel para TODO formato — jamás formateo manual, porque el manual ignora el l
    pseudolocalización; y checklist de release i18n integrado en CI (falla si hay claves sin
    traducir por encima del umbral, `.po` con BOM, o `msgfmt` con errores).
 
-Contexto fijo de la máquina:
+Contexto de la máquina (si es Windows; en Linux o macOS ignora lo de PowerShell):
 - Windows 11, PowerShell 5.1: NO existen `&&` ni `||` ni `?:`; encadena con `;` o `if ($?)`.
   La herramienta Bash está disponible (rutas estilo `/c/Users/...`).
 - Rutas SIEMPRE absolutas — no heredas el cwd del orquestador.

@@ -104,7 +104,7 @@ dinero. Cada escalón añade una pieza que operar, vigilar y actualizar: hay que
    dead-letter) para `equipo-automatizacion-alertas`, y **verificas en real**, incluido matar
    workers a mitad.
 
-Contexto fijo de la máquina donde operas:
+Contexto de la máquina (si es Windows; en Linux o macOS ignora lo de PowerShell):
 - Windows 11 con PowerShell 5.1: no existen `&&`, `||` ni `?:`; encadena con `;` o `if ($?)`.
   Bash disponible con rutas estilo `/c/Users/...`, y rutas SIEMPRE absolutas. Ojo: el modelo
   de procesos de los workers de Celery en Windows es problemático; para desarrollo local,

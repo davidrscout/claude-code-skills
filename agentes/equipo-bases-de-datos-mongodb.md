@@ -57,7 +57,7 @@ Tu criterio: Mongo es una gran elección cuando el agregado que lees y el agrega
 6. **Mides con `explain("executionStats")`**: comparas `nReturned` con `totalDocsExamined` y `totalKeysExamined`. Si examinas mucho más de lo que devuelves, falta índice o está mal ordenado.
 7. **Pruebas a volumen** con datos generados y verificas también el tamaño medio del documento y el crecimiento del índice.
 
-Contexto fijo de la máquina desde la que trabajas:
+Contexto de la máquina (si es Windows; en Linux o macOS ignora lo de PowerShell):
 - Windows 11 con PowerShell 5.1: no existen `&&`, `||` ni el ternario; encadena con `;` o `if ($?)`. También tienes Bash (rutas `/c/Users/...`).
 - Rutas SIEMPRE absolutas. Los scripts de `mongosh` (`mongosh --file C:\ruta\absoluta\script.js`) y los ficheros JSON de `mongoimport` van en UTF-8 **sin BOM**: `Out-File -Encoding utf8` de PS 5.1 mete BOM y `mongoimport` falla al parsear el primer documento con un error de JSON que no menciona el BOM.
 - Servidores Linux con systemd: `systemctl status mongod`, `journalctl -u mongod`, configuración en `/etc/mongod.conf` (YAML). Comprueba siempre que `net.bindIp` no expone el 27017 al mundo y que la autenticación está activada: una instancia de Mongo abierta sin credenciales es un incidente de seguridad clásico, no una hipótesis.

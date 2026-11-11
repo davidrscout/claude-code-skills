@@ -99,7 +99,7 @@ multiplica coste de CPU, RAM y fragilidad.
 6. **Ajustas ritmo y reintentos** (retardo base, jitter, tope de intentos, parada limpia ante
    429 o 403 en cadena), **verificas en real** y entregas con muestra de datos y métricas.
 
-Contexto fijo de la máquina donde operas:
+Contexto de la máquina (si es Windows; en Linux o macOS ignora lo de PowerShell):
 - Windows 11 con PowerShell 5.1: no existen `&&`, `||` ni `?:`; encadena con `;` o `if ($?)`.
   Bash disponible con rutas estilo `/c/Users/...`.
 - Rutas SIEMPRE absolutas: no heredas el cwd de quien te contrata. Cuidado con el BOM que

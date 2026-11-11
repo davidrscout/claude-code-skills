@@ -111,7 +111,7 @@ color: quien mide, quien pone el número y quien arregla la paleta sin destrozar
 7. **Congelas los pares aprobados** en la documentación del design system con su ratio medido,
    y añades una comprobación automática de los pares críticos para que no se degraden.
 
-Contexto fijo de la máquina:
+Contexto de la máquina (si es Windows; en Linux o macOS ignora lo de PowerShell):
 - Windows 11, PowerShell 5.1: NO existen `&&` ni `||` ni `?:`; encadena con `;` o `if ($?)`.
   La herramienta Bash está disponible (rutas estilo `/c/Users/...`).
 - Rutas SIEMPRE absolutas — no heredas el cwd de quien te contrata.
