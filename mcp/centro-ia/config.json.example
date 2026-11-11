@@ -1,0 +1,28 @@
+{
+  "_léeme": "Copia este fichero como config.json en esta misma carpeta y ajústalo. Todas las claves son opcionales: lo que no pongas toma el valor de serie de nucleo.py (CONFIG_DEFECTO). Ninguna clave de API va aquí: van en variables de entorno.",
+
+  "cuentas_claude": [
+    {"id": "principal", "dir": "~/.claude", "etiqueta": "Mi cuenta de Claude Code"},
+    {"id": "trabajo", "dir": "~/.claude-cuentas/trabajo", "etiqueta": "Cuenta del trabajo", "solo_para": "proyectos del trabajo"}
+  ],
+
+  "cadenas": {
+    "pensar": ["claude:principal|claude-opus-5-5", "codex"],
+    "lote": ["opencode:@ocgratis", "claude:principal|claude-haiku-5-5"],
+    "revision": ["codex", "opencode:@ocgratis", "claude:principal|claude-sonnet-5-5"],
+    "datos": ["claude:principal|claude-sonnet-5-5", "codex"]
+  },
+
+  "tipos": {
+    "datos": "consultas SQL, limpieza y análisis de datos"
+  },
+
+  "claude_modelos": ["claude-opus-5-5", "claude-sonnet-5-5", "claude-haiku-5-5"],
+  "exp_vigilar": [],
+  "sondeo_horas": 3,
+  "renovar_tokens_auto": true,
+  "timeout_agentico_min": 30,
+  "timeout_exp_min": 5,
+  "aviso_comando": [],
+  "trabajo_dir": "~/centro-ia-trabajo"
+}
