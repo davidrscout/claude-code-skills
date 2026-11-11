@@ -1,7 +1,31 @@
-# Skills de Claude Code
+# Skills para Claude Code y OpenCode
 
-Colección de skills para Claude Code: vídeo y motion en código, diseño de interfaces y método de trabajo.
-Cada carpeta es una skill; para instalarla, cópiala en `~/.claude/skills/`.
+Colección de skills: vídeo y motion en código, diseño de interfaces y método de trabajo.
+Cada carpeta es una skill en formato estándar `SKILL.md` (cabecera `name` + `description` y el cuerpo con las instrucciones), así que funciona igual en **Claude Code** y en **OpenCode** (gratis, [opencode.ai](https://opencode.ai)). Aunque el texto de algunas diga «Claude Code», el agente las usa igual.
+
+## Instalación
+
+**OpenCode** (lee las skills de `~/.config/opencode/skills/`, de `.opencode/skills/` dentro del proyecto y también de `~/.claude/skills/`; ver [docs](https://opencode.ai/docs/skills)):
+
+```bash
+git clone https://github.com/davidrscout/claude-code-skills.git
+mkdir -p ~/.config/opencode/skills
+cp -r claude-code-skills/*/ ~/.config/opencode/skills/
+```
+
+En Windows (PowerShell):
+
+```powershell
+git clone https://github.com/davidrscout/claude-code-skills.git
+New-Item -ItemType Directory -Force "$env:USERPROFILE\.config\opencode\skills" | Out-Null
+Get-ChildItem claude-code-skills -Directory | Copy-Item -Recurse -Force -Destination "$env:USERPROFILE\.config\opencode\skills"
+```
+
+Para instalar solo algunas, copia solo esas carpetas. Para que una skill valga solo en un proyecto, cópiala en `<proyecto>/.opencode/skills/`.
+
+**Claude Code**: igual, pero en `~/.claude/skills/` (global) o `.claude/skills/` (proyecto).
+
+Comprueba que carga pidiéndole al agente, por ejemplo, «usa la skill techo» o escribiendo `/techo`.
 
 ## Skills propias
 
@@ -31,3 +55,8 @@ Copias sin cambios; cada carpeta incluye la licencia original (`LICENSE`) y su o
 - `remotion-* (13)`: remotion-dev/skills no publica licencia: todos los derechos reservados.
 - `onetake`: PolyForm Noncommercial: solo uso no comercial.
 - `guizang-product-video`: AGPL-3.0 con recursos bajo BUSL-1.1.
+- `security-audit` (y el resto del plugin Claude Security): propiedad de Anthropic, su licencia prohíbe redistribuirla.
+
+## No incluidas por ser personales
+
+- `orquestador` y `consolidar-memoria`: dependen de la configuración concreta de un PC (T3 Code, cuentas y rutas de memoria); no sirven fuera de ese entorno.
