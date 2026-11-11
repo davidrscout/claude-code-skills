@@ -103,7 +103,7 @@ la intención:
 rg -n 'def _(is|wants|looks_like|seems|detect|should|has)_' <nucleo>
 rg -n 're\.(search|match|compile)\(' <nucleo>
 ```
-Mira si la heurística DECIDE la rama o solo la adorna. En el proyecto de referencia (un SaaS con chat de IA) había nueve
+Mira si la heurística DECIDE la rama o solo la adorna. En el caso de referencia había nueve
 (`_looks_like_player_name`, `_is_shortlist_request`, `_wants_cheap`…).
 
 **Falso positivo.** Dominios donde el determinismo es el producto: facturación,
@@ -122,7 +122,7 @@ algo".
 ```
 rg -n '\.pop\(|fallback|relax|relaj|ampliar|sin resultados|best.?effort|except:\s*pass|except Exception:\s*(pass|continue)' <nucleo>
 ```
-Y leer la rama: ¿qué llega de verdad al usuario por ese camino? En el proyecto de referencia (un SaaS con chat de IA),
+Y leer la rama: ¿qué llega de verdad al usuario por ese camino? En el caso de referencia,
 `relaxed.pop("filter_leagues_tm")` devolvía un central del Tottenham cuando se
 pedía la B argentina.
 
@@ -223,7 +223,7 @@ cosido a mano.
 **Detectar.** Inventaría las formas de entrega (funciones de salida,
 plantillas) y contrástalas con peticiones reales guardadas. Mira cómo llegó el
 último modo: si entró como rama y no como caso del contrato, el techo es la
-premisa. En el proyecto de referencia (un SaaS con chat de IA), "las 5 mejores opciones" tuvo que coserse como modo aparte.
+premisa. En el caso de referencia, "las 5 mejores opciones" tuvo que coserse como modo aparte.
 
 **Falso positivo.** Herramienta deliberadamente opinada que hace UNA cosa muy
 bien y dice que no al resto, con retención que lo confirma.
@@ -261,7 +261,7 @@ no-código, rellena esta tabla para él en `contrato.md`.
 | Grado de cierre | quién decide en el if | ¿la portada la decide una lista fija, una colección automática o el dato de ventas? | ¿quién decide a quién escribir: una lista, una heurística de "web mala", el dato de respuesta? | ¿quién decide qué se hace: el plan o la señal? |
 | Degradación a ciegas | `relaxed.pop` | el pick automático que elige "ice silk underwear" para unos leggings y se publica igual | se contacta a todo lo que pasa el filtro aunque el filtro falle | seguir el plan cuando la hipótesis ya falló |
 | Métrica-rey | cobros, informes útiles | pedidos, margen neto tras ads | contratos firmados, leads con teléfono que contestan | el resultado que el plan prometía |
-| Techo aritmético | cobertura de la BD | margen × conversión medida × tope del canal; límite de la audiencia; políticas de la plataforma | leads/día que la fuente puede dar × tasa de respuesta medida × capacidad de reuniones de el usuario | recursos × tiempo frente al objetivo |
+| Techo aritmético | cobertura de la BD | margen × conversión medida × tope del canal; límite de la audiencia; políticas de la plataforma | leads/día que la fuente puede dar × tasa de respuesta medida × capacidad de reuniones del usuario | recursos × tiempo frente al objetivo |
 | Techo de plataforma | API de un tercero | políticas de Meta Ads, límites de la API de Shopify, comisiones | Google Maps que bloquea, WhatsApp que limita, BORME sin teléfonos | dependencia de una decisión ajena |
 | Banco de casos | consultas, logs | pedidos reales, sesiones, carritos abandonados, comentarios | leads reales con su resultado, conversaciones | decisiones pasadas y su resultado |
 | Kill-test | replay en sombra | un test de una semana con presupuesto acotado, o una página nueva contra la vieja | 20 contactos por el camino nuevo frente a 20 por el viejo, mismo periodo | una decisión pequeña que confirme o tumbe la hipótesis |

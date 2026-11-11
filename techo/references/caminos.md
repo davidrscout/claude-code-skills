@@ -19,7 +19,7 @@ tocar lo viejo. Un camino sin seam no tiene plan de convivencia.
 1. **Negar el supuesto.** Coge cada supuesto fundacional de la Fase 2, escrito
    como afirmación en presente, y niégalo. Diseña el sistema MÍNIMO que
    funcionaría con la negación: quién decide ahora, qué herramientas necesita,
-   qué límites duros lleva, qué código deja de hacer falta. el proyecto de referencia (un SaaS con chat de IA): "el código
+   qué límites duros lleva, qué código deja de hacer falta. En el proyecto de referencia (un SaaS con chat de IA): "el código
    decide el flujo y el modelo rellena huecos" → negado → "el modelo decide y
    actúa con herramientas; el código pone límites".
 2. **Subir de grado las decisiones más parcheadas.** Con el mapa de decisiones,
@@ -89,7 +89,7 @@ Próximo techo: contra qué chocará este camino cuando funcione, y cuándo.
 Lo que se pierde el día 1: capacidades que hoy salen gratis y el camino nuevo
   no cubre (coste acotado por petición, latencia previsible, reproducibilidad,
   casos límite ya resueltos, control determinista). Cómo se acota cada una.
-Kill-test (< 1 sesión = unas 3 h de el usuario): el experimento que puede MATARLO,
+Kill-test (< 1 sesión = unas 3 h del usuario): el experimento que puede MATARLO,
   no confirmarlo.
   Banco: <ruta a banco_casos\, 10-20 casos reales anonimizados>
   Protocolo: replay en sombra del camino nuevo contra el viejo sobre el banco
@@ -100,7 +100,7 @@ Seam de convivencia: el punto de extensión que YA existe por donde entra lo
   viejo y nuevo (flag por usuario, porcentaje de tráfico, ruta paralela).
   Métrica de paridad para avanzar de fase. Punto de no retorno. Vuelta atrás
   en minutos. Qué ficheros mueren y en qué fase.
-Coste: rango de sesiones de el usuario (solo, manteniendo lo demás) DERIVADO de un
+Coste: rango de sesiones del usuario (solo, manteniendo lo demás) DERIVADO de un
   precedente citado ("el parche X tocó N ficheros y llevó M sesiones según
   <nota fechada>"), etiquetado INFERIDO; sin precedente, SIN MEDIR y se dice
   qué lo mediría. Desglosado por fase, con la primera fase que aporta valor
@@ -109,10 +109,10 @@ Coste: rango de sesiones de el usuario (solo, manteniendo lo demás) DERIVADO de
   a partir de qué duración esa carga hace inviable el camino aunque sea
   correcto.
 Coste de oportunidad: qué pasaría si esas sesiones fueran a vender o a otro
-  proyecto de el usuario.
+  proyecto del usuario.
 Dependencias fuera de control: datos que no tienes, proveedores, permisos,
   aprobaciones de plataforma, clientes que aún no existen.
-Coherencia con decisiones documentadas de el usuario: <ninguna contradicción | contradice X, y por qué se propone igual>
+Coherencia con decisiones documentadas del usuario: <ninguna contradicción | contradice X, y por qué se propone igual>
 Qué lo mataría: la condición falsable que, si se cumple, lo descarta.
 Confianza: alta/media/baja, con motivo.
 ```

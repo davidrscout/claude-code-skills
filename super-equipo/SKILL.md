@@ -23,6 +23,22 @@ La plantilla tiene **dos niveles**, y elegir bien entre ellos es la mitad del tr
   `equipo-bases-de-datos` sabe elegir entre Postgres y Mongo; `equipo-bases-de-datos-postgresql`
   sabe por qué tu índice parcial no se usa cuando el parámetro llega como `text`.
 
+## Compatibilidad: Claude Code y OpenCode
+
+Esta skill se escribió para Claude Code y funciona igual en OpenCode: lo único que cambia es cómo se lanza a cada miembro. Donde el texto diga una herramienta de Claude Code, usa su equivalente:
+
+| En el texto | Claude Code | OpenCode (v2) |
+|---|---|---|
+| **Workflow** (varios agentes con un script) | herramienta `Workflow`, si está activada | no existe: lanza varios subagentes en el mismo turno con la herramienta `subagent` |
+| **Agent** / `subagent_type: "<nombre>"` | herramienta `Agent` | herramienta `subagent` con el id del agente (o pídelo en texto: «usa el subagente `<nombre>`»). En versiones antiguas de OpenCode se llamaba `task` |
+| `model: 'opus'` en un subagente | parámetro `model` | campo `model:` (`proveedor/modelo`) en el frontmatter del agente; sin él, hereda el modelo de la sesión |
+| **AskUserQuestion** | herramienta | herramienta `question` |
+| `isolation: worktree` | parámetro de `Agent` | herramientas de worktree de OpenCode (`worktree_create`, en modo código) o `git worktree add` a mano |
+| `~/.claude/agents/` | carpeta de agentes de usuario | `~/.config/opencode/agents/` (el instalador del repo los convierte: `python instalar.py --opencode`) |
+| memoria `~/.claude/projects/<proyecto>/memory/` | memoria persistente | no hay equivalente automático: guarda las notas en una carpeta propia (p. ej. `~/.config/opencode/memoria/`) y léela al empezar |
+
+**La plantilla está en este repo.** La carpeta `agentes/` trae los 234 miembros de `references/roster.md` (24 leads y transversales y 210 especialistas) más `estratega` y `rapido`. Instálalos con `python instalar.py --agentes` desde la raíz del repo: los copia a `~/.claude/agents/` y los convierte al formato de OpenCode en `~/.config/opencode/agents/`. Si un encargo pide una tecnología que no está, se ficha con la auto-extensión (más abajo).
+
 ## Regla nº 1 (la que define esta skill)
 
 **PROHIBIDO usar un subagente genérico con un prompt improvisado para trabajo que tiene

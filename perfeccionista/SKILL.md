@@ -10,6 +10,20 @@ Recibes un encargo (código, integración, web, bot, documento… cualquier entr
 Tu trabajo no es "hacerlo y entregarlo": es llevarlo en bucle —implementar, verificar,
 puntuar, mejorar— hasta que un jurado independiente le dé un **10.000 confirmado**.
 
+## Compatibilidad: Claude Code y OpenCode
+
+Esta skill se escribió para Claude Code y funciona en OpenCode con estas equivalencias (el jurado ya prevé que no haya `Workflow`: en OpenCode usa subagentes en paralelo, y si tampoco hay subagentes, procesos `opencode run` separados):
+
+| En el texto | Claude Code | OpenCode (v2) |
+|---|---|---|
+| **Workflow** (varios agentes con un script) | herramienta `Workflow`, si está activada | no existe: lanza varios subagentes en el mismo turno con la herramienta `subagent` |
+| **Agent** / `subagent_type: "<nombre>"` | herramienta `Agent` | herramienta `subagent` con el id del agente (o pídelo en texto: «usa el subagente `<nombre>`»). En versiones antiguas de OpenCode se llamaba `task` |
+| `model: 'opus'` en un subagente | parámetro `model` | campo `model:` (`proveedor/modelo`) en el frontmatter del agente; sin él, hereda el modelo de la sesión |
+| **AskUserQuestion** | herramienta | herramienta `question` |
+| `isolation: worktree` | parámetro de `Agent` | herramientas de worktree de OpenCode (`worktree_create`, en modo código) o `git worktree add` a mano |
+| `~/.claude/agents/` | carpeta de agentes de usuario | `~/.config/opencode/agents/` (el instalador del repo los convierte: `python instalar.py --opencode`) |
+| memoria `~/.claude/projects/<proyecto>/memory/` | memoria persistente | no hay equivalente automático: guarda las notas en una carpeta propia (p. ej. `~/.config/opencode/memoria/`) y léela al empezar |
+
 ## Principio rector: la nota solo vale si es verdad
 
 Todo el sistema se sostiene sobre una única cosa: que la nota sea honesta. Si la nota
@@ -42,13 +56,13 @@ escribe su resultado antes de pasar a la siguiente.
 Dónde: `_perfeccionista\<slug>\` en la raíz LOCAL del proyecto (la máquina donde
 corres tú, aunque el entregable viva en un VPS — el estado nunca vive solo en el
 servidor). Si el encargo no tiene carpeta de proyecto clara, la raíz del proyecto
-pasa a ser `~/Desktop/<slug>\` (entregable dentro, estado en
+pasa a ser `~/Desktop/<slug>/` (entregable dentro, estado en
 `...\<slug>\_perfeccionista\<slug>\`); nunca un `_perfeccionista\` suelto en
-`la carpeta del usuario`. Confirma la ubicación en el resumen del contrato (Fase 0).
+la carpeta del usuario (`~`). Confirma la ubicación en el resumen del contrato (Fase 0).
 
 | Fichero | Contenido |
 |---|---|
-| `contrato.md` | El encargo destilado: objetivo, alcance, criterios de éxito, ruta del entregable, suposiciones. Congelado con el OK de el usuario. |
+| `contrato.md` | El encargo destilado: objetivo, alcance, criterios de éxito, ruta del entregable, suposiciones. Congelado con el OK del usuario. |
 | `rubrica.md` | Dimensiones, pesos y qué es un 10 en cada una. Congelada tras auditoría. |
 | `historial.md` | Línea `ESTADO:` + una fila por pasada de jurado, con notas de 3 decimales. |
 | `siguiente_prompt.md` | El autoprompt de mejora para la vuelta siguiente. |
@@ -96,7 +110,7 @@ se convertirá en una vuelta extra del bucle (o en un 10 falso sobre un contrato
 3. **Criterio de parada de la entrevista:** si dos implementaciones razonables del
    encargo serían distintas, aún falta una pregunta. Cuando ya no queden ambigüedades
    materiales, para — no preguntes por preguntar.
-4. **Checkpoint del contrato.** Escribe `contrato.md` y enséñale a el usuario un resumen
+4. **Checkpoint del contrato.** Escribe `contrato.md` y enséñale al usuario un resumen
    corto (incluida la ubicación del estado y del entregable). TERMINA TU TURNO y
    espera su OK explícito; si responde con cambios, actualiza y vuelve a enseñar —
    el OK es sobre la versión final. Avísale en ese mismo mensaje de que el bucle
@@ -132,7 +146,7 @@ Antes de escribir una línea del entregable, escribe `rubrica.md`:
   `-respuesta.md` junto al contrato: sin esos ficheros la rúbrica NO está
   congelada. Veredicto "no-apta" → aplica las objeciones y reaudita. Existe porque
   quien escribe la rúbrica es quien será puntuado con ella.
-- Congelada significa congelada. Solo se toca con aprobación de el usuario; si un
+- Congelada significa congelada. Solo se toca con aprobación del usuario; si un
   criterio resulta contradictorio o imposible, consúltale (en headless: aplica la
   lectura más estricta y anótala en "Aclaraciones" como `HEADLESS`). Nunca se
   elimina ni ablanda en silencio.
@@ -167,7 +181,7 @@ entregable (guía completa por tipo en `references/rubrica.md`):
 - **Integraciones/APIs**: llamadas reales end-to-end. Si tocar producción cuesta
   dinero o es irreversible, usa sandbox/dry-run y anótalo en la evidencia (una
   línea factual); si el contrato no preveía sandbox, es una ambigüedad: consúltala
-  a el usuario (en headless: lectura más estricta + nota en "Aclaraciones").
+  al usuario (en headless: lectura más estricta + nota en "Aclaraciones").
 - **Documentos**: renderiza el formato final y revísalo renderizado, no en fuente.
 
 Cada verificación se guarda en `evidencia\vuelta-N\` como salida cruda con su
@@ -180,7 +194,7 @@ Si algo falla, arréglalo y repite. **Puntuar un estado en rojo está prohibido.
 Pero la Fase 3 también puede atascarse: si llevas 3 intentos arregla-verifica
 fallando en lo mismo, aplica el pivote material de la Fase 5 sin esperar al jurado,
 guarda cada intento en `evidencia\vuelta-N\verificacion_intento_K.txt` (así el
-contador sobrevive a compactaciones) y emite a el usuario una línea de latido:
+contador sobrevive a compactaciones) y emite al usuario una línea de latido:
 `VERIFICACIÓN vuelta N: intento K fallido — <motivo>`.
 
 Antes de pasar al jurado, congela un snapshot del entregable (commit + tag
@@ -217,7 +231,7 @@ Resumen (el detalle de jurado.md manda):
   la pasada no vale.
 - Nota final = agregación entera en milésimas (comando en jurado.md), truncada a 3
   decimales. Regístrala en `historial.md` con la tabla completa nota×peso y
-  repórtala a el usuario con el signo real del delta:
+  repórtala al usuario con el signo real del delta:
 
 ```
 VUELTA 4 — NOTA: 9.371 / 10.000 (Δ +0.482)
@@ -244,7 +258,7 @@ Si la nota < 10.000:
   funciona: pivota de verdad — reescribe el componente desde cero, cambia de
   arquitectura o librería, ataca el problema por otro flanco. El pivote cambia el
   CÓMO, nunca el QUÉ: contrato, rúbrica y alcance son intocables; si crees que el
-  problema es una suposición o decisión del contrato, eso es de el usuario — consúltale
+  problema es una suposición o decisión del contrato, eso es del usuario — consúltale
   (en headless: lectura más exigente + nota en "Aclaraciones").
 - Con nota ≥ 9.900 el umbral engaña (solo quedan centésimas): ahí el atasco se mide
   por ítems de "PARA EL 10" que se repiten dos vueltas sin resolverse, y el pivote
@@ -257,7 +271,7 @@ Si la nota < 10.000:
   regresión real (no criterio distinto del juez), puedes revertir al snapshot de la
   mejor vuelta y reintentar la mejora de otro modo.
 
-**Cuándo (y solo cuándo) interrumpir a el usuario:** un bloqueo que dependa de él —
+**Cuándo (y solo cuándo) interrumpir al usuario:** un bloqueo que dependa de él —
 credenciales, un pago, una decisión de negocio, un permiso de herramienta que
 congela el bucle, o un criterio contradictorio de rúbrica/contrato. Preséntale la
 nota actual, el historial y la pregunta exacta; nunca "¿sigo?" — eso ya lo contestó
@@ -296,18 +310,18 @@ nueva y jueces) en `evidencia\vuelta-N-confirmacion\` y en la copia neutra
   resulta injustificado, o la aritmética recalculada no cuadra: el 10.000 no
   computa; la confirmación invalidada se registra igualmente como fila (Tipo
   `confirmación`, motivo en Resumen); corrige lo que proceda (rúbrica endurecida
-  con OK de el usuario — headless: endurécela y documenta en "Aclaraciones") y relanza
+  con OK del usuario — headless: endurécela y documenta en "Aclaraciones") y relanza
   pasada normal vía Fase 5 → Fase 2: vuelta nueva con N+1, la carpeta `vuelta-N`
   del 10.000 invalidado no se reescribe.
 - **Si la propia confirmación sale degradada o mixta,** no computa por
   infraestructura, no por nota: no consume el intento, `ESTADO:` sigue
-  `pendiente-confirmacion`, avisa a el usuario del bloqueo y repite la confirmación
+  `pendiente-confirmacion`, avisa al usuario del bloqueo y repite la confirmación
   cuando haya jueces reales — sin exigir cambios en el entregable (eso no es jugar
   a la varianza).
 
 Solo con dos 10.000 seguidos, cierra: ACTUALIZA la primera línea del historial a
 `ESTADO: CERRADO <fecha> — 10.000 confirmado` (es la línea que lee la reanudación)
-e informa a el usuario: nota confirmada, vueltas totales, tabla del historial, qué se
+e informa al usuario: nota confirmada, vueltas totales, tabla del historial, qué se
 construyó, cómo se usa, dónde está la evidencia, y cualquier punto `NO verificado
 en real` en cabeza. Deja `_perfeccionista\` intacto: es el registro de calidad del
 encargo.

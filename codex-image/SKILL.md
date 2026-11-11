@@ -1,7 +1,7 @@
 ---
 name: codex-image
 description: >-
-  Genera o edita imágenes GRATIS desde Claude Code usando la app OpenAI Codex (Microsoft Store) y una suscripción ChatGPT de pago, sin API key y sin coste por imagen. Solo Windows. Úsala SOLO cuando el usuario invoque /codex-image o pida explícitamente generar la imagen con Codex/ChatGPT; nunca por iniciativa propia.
+  Genera o edita imágenes GRATIS desde Claude Code u OpenCode usando la app OpenAI Codex (Microsoft Store) y una suscripción ChatGPT de pago, sin API key y sin coste por imagen. Solo Windows. Úsala SOLO cuando el usuario invoque /codex-image o pida explícitamente generar la imagen con Codex/ChatGPT; nunca por iniciativa propia.
 ---
 
 # codex-image — generación de imágenes gratis vía Codex CLI
@@ -23,14 +23,15 @@ Genera imágenes con la herramienta interna `image_gen` de la app **OpenAI Codex
 
 ## Cómo invocarla
 
-Ejecuta el motor y luego **lee el PNG** con `Read`:
+Ejecuta el motor y luego **lee el PNG** con tu herramienta de lectura de ficheros (`Read` en Claude Code, `read` en OpenCode):
 
 ```
 powershell -NoProfile -ExecutionPolicy Bypass -File "%USERPROFILE%\.claude\skills\codex-image\gen-image.ps1" -Prompt "<descripción detallada>" -Out "C:\ruta\salida.png" [-Size "1024x1024"] [-Ref "C:\ref1.png","C:\ref2.png"]
 ```
 
 - stdout termina en `RESULT_OK <ruta> <bytes>` o `RESULT_FAIL <motivo>`.
-- Tras `RESULT_OK`, usa **Read** sobre `<ruta>` para ver la imagen.
+- Tras `RESULT_OK`, lee `<ruta>` para ver la imagen.
+- La ruta del script depende de dónde instalaste la skill: `%USERPROFILE%\.claude\skills\codex-image\` (Claude Code) o `%USERPROFILE%\.config\opencode\skills\codex-image\` (OpenCode). En OpenCode también puedes usar la ruta base que te da la herramienta `skill` al cargarla.
 - Para **EDITAR**: pasa la imagen base con `-Ref` y describe el cambio en `-Prompt`.
 - Tamaños: cuadrado `1024x1024`, horizontal `1536x1024`, vertical `1024x1536`.
 

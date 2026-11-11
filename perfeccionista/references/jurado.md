@@ -20,9 +20,9 @@ difícil inflar la nota.
      equivalente), varias llamadas en el mismo mensaje para que corran en paralelo.
      Comprueba qué herramientas tienes ANTES de elegir; no asumas por el nombre.
   3. **Proceso nuevo por juez**: `claude -p "<prompt de juez>"` desde la terminal —
-     contexto limpio de verdad, disponible en el entorno de el usuario. **En tandas de
+     contexto limpio de verdad, disponible en el entorno del usuario. **En tandas de
      máximo 2 a la vez, nunca los 6-8 juntos**: cada proceso es un Claude entero
-     (~1-2 GB de RAM) y el PC de el usuario tiene 16 GB — 7 en paralelo lo tumban.
+     (~1-2 GB de RAM) y el PC del usuario tiene 16 GB — 7 en paralelo lo tumban.
      Además, cada juez consume cupo de la suscripción: si un juez devuelve un
      error de límite de uso ("session limit"), detén la pasada, deja el estado en
      disco y avisa — reanudar con "continúa" tras el reset es barato.
@@ -35,7 +35,7 @@ difícil inflar la nota.
      Antes de declarar este modo, guarda en la carpeta de evidencia de la pasada el
      error literal de los mecanismos 1-3 — sin ese error guardado, la pasada
      degradada no vale. Sus notas se registran como `degradado-secuencial` en el
-     historial y se declaran así en el informe a el usuario.
+     historial y se declaran así en el informe al usuario.
 - **Modelo de los jueces:** corren con el modelo más capaz disponible en el
   entorno, como mínimo el mismo del orquestador (con `claude -p`, pasa `--model`
   explícito). El mecanismo y el modelo de cada juez se registran en la línea "Modo
@@ -47,7 +47,7 @@ difícil inflar la nota.
   relanzamiento): se registra como `mixto (juez X degradado)` y cuenta entera como
   degradada. **Una pasada degradada jamás produce el 10.000 de cierre ni la
   confirmación**: si nunca hay jueces reales disponibles, es un bloqueo de
-  infraestructura y se avisa a el usuario. Una confirmación que salga degradada/mixta
+  infraestructura y se avisa al usuario. Una confirmación que salga degradada/mixta
   no computa por infraestructura, no por nota: se repite cuando haya jueces
   reales, sin exigir cambios en el entregable.
 
@@ -196,7 +196,7 @@ PLANTILLA DEL AUDITOR DE RÚBRICA: [bloque literal de references/rubrica.md]
 
 Interpretación de resultados de la confirmación (la aplica el orquestador, sin
 margen): cualquier `RUBRICA_BLANDA: sí` invalida el cierre (el 10.000 no computa;
-endurece la rúbrica con OK de el usuario — en headless, endurécela y documenta en
+endurece la rúbrica con OK del usuario — en headless, endurécela y documenta en
 Aclaraciones — y relanza pasada normal vía Fase 5 → Fase 2: vuelta nueva con N+1,
 sin reescribir la carpeta del 10.000 invalidado). Cualquier relanzamiento previo que
 resulte injustificado, cualquier descuadre en la aritmética recalculada o
@@ -258,7 +258,7 @@ python -c "notas={'Funcionalidad':(9.500,25),'Tests':(8.100,20),'Robustez':(9.00
   sobre los veredictos válidos, sin "interpretaciones" al alza.
 - **Descuentos contradictorios entre vueltas** (el juez de la vuelta N pide X y el
   de la N+1 pide lo contrario): señal de criterio ambiguo en la rúbrica. En
-  interactivo, consúltalo a el usuario y anota su respuesta en "Aclaraciones" de
+  interactivo, consúltalo al usuario y anota su respuesta en "Aclaraciones" de
   `rubrica.md`; en headless, elige la lectura más coherente con el contrato y el
   estándar profesional y anótala marcada `HEADLESS`, citando literalmente los dos
   descuentos contradictorios que la justifican (fichero de juez y línea) — sin esa

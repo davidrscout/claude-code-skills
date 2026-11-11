@@ -8,9 +8,9 @@ más difícil inflar la nota.
 
 Ubicación: `_perfeccionista\<slug>\` en la raíz LOCAL del proyecto (nunca solo en
 un VPS remoto). Si no hay carpeta de proyecto clara, la raíz del proyecto pasa a
-ser `~/Desktop/<slug>\` (con el entregable dentro), y el estado queda
-exactamente en `~/Desktop/<slug>\_perfeccionista\<slug>\`. Nunca un
-`_perfeccionista\` suelto en `la carpeta del usuario`. En ese fallback, el contrato fija
+ser `~/Desktop/<slug>/` (con el entregable dentro), y el estado queda
+exactamente en `~/Desktop/<slug>/_perfeccionista/<slug>/`. Nunca un
+`_perfeccionista\` suelto en la carpeta del usuario (`~`). En ese fallback, el contrato fija
 como raíz del entregable una subcarpeta (p. ej. `Desktop\<slug>\src\`), nunca
 `Desktop\<slug>\` entera — los jueces no deben recibir una raíz que contenga
 `_perfeccionista\`. El slug sale del encargo: corto,
@@ -76,7 +76,7 @@ que reciben TODOS los jueces y lo que verifica la reanudación.>
 por <X>`.>
 ```
 
-Con el OK de el usuario el contrato queda CONGELADO: solo él lo modifica, y cada cambio
+Con el OK del usuario el contrato queda CONGELADO: solo él lo modifica, y cada cambio
 se apunta con fecha en la sección "Aclaraciones (contrato y rúbrica)" de
 `rubrica.md`.
 
@@ -110,7 +110,7 @@ Después, una fila por pasada de jurado. `Tipo ∈ {normal, confirmación}` — 
 del jurado (workflow | subagentes | claude-p | degradado-secuencial | mixto (juez X
 degradado)) NO va en Tipo: va en la línea "Modo jurado" del detalle. Toda nota
 —final y por dimensión— se escribe en disco con 3 decimales; solo el informe-latido
-a el usuario puede abreviar. El Δ lleva su signo real (también negativo) y siempre se
+al usuario puede abreviar. El Δ lleva su signo real (también negativo) y siempre se
 calcula contra la pasada inmediatamente anterior, sea del tipo que sea; la fila de
 confirmación usa el siguiente número de Pasada.
 
@@ -138,7 +138,7 @@ PARA EL 10 consolidado (incluye FUERA DE DIMENSIÓN asignados):
 
 El autoprompt de la vuelta siguiente. Redáctalo como un encargo completo para un
 agente que no ha visto nada: contexto mínimo, lista concreta de cambios, y qué
-verificación debe pasar. Si hay un bloqueo pendiente de el usuario, va en la primera
+verificación debe pasar. Si hay un bloqueo pendiente del usuario, va en la primera
 línea. Se sobrescribe cada vuelta (el historial guarda el resumen de las
 anteriores).
 
@@ -187,7 +187,7 @@ Copia del entregable antes de cada pasada de jurado si no hay git
 (sin número de vuelta en el nombre). Permite revertir si una mejora sale peor. La
 pasada de confirmación no necesita snapshot nuevo: el entregable no ha cambiado.
 
-## Informe por vuelta a el usuario (formato canónico)
+## Informe por vuelta al usuario (formato canónico)
 
 Tras cada pasada de jurado, UN bloque corto en la conversación (el detalle está en
 disco):
@@ -209,7 +209,7 @@ Al invocarte con `_perfeccionista\<slug>\` existente (o si el usuario dice "cont
 
 1. Lee `contrato.md` y compara su objetivo con el encargo actual.
    - Coincide y `ESTADO: CERRADO` → no hay nada que retomar: trabajo nuevo sobre
-     ese entregable = encargo nuevo (en interactivo pregunta a el usuario; en headless
+     ese entregable = encargo nuevo (en interactivo pregunta al usuario; en headless
      crea `<slug>-YYYYMMDD`). El 10.000 antiguo jamás se hereda.
    - No coincide → es otro encargo: slug nuevo con sufijo (`-2` o fecha).
    - Coincide y no cerrado → reanuda (pasos siguientes).

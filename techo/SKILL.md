@@ -26,9 +26,25 @@ creciendo por el camino que lleva, o el camino en sí es el límite?** Y si el
 camino es el límite, cuál es el otro camino, cuánto cuesta de verdad y cómo se
 comprueba barato antes de apostar meses.
 
+## Compatibilidad: Claude Code y OpenCode
+
+Esta skill se escribió para Claude Code y funciona en OpenCode con estas equivalencias (la escalera de la sección «Orquestación» ya prevé que no haya `Workflow`: en OpenCode empiezas por el escalón de subagentes en paralelo):
+
+| En el texto | Claude Code | OpenCode (v2) |
+|---|---|---|
+| **Workflow** (varios agentes con un script) | herramienta `Workflow`, si está activada | no existe: lanza varios subagentes en el mismo turno con la herramienta `subagent` |
+| **Agent** / `subagent_type: "<nombre>"` | herramienta `Agent` | herramienta `subagent` con el id del agente (o pídelo en texto: «usa el subagente `<nombre>`»). En versiones antiguas de OpenCode se llamaba `task` |
+| `model: 'opus'` en un subagente | parámetro `model` | campo `model:` (`proveedor/modelo`) en el frontmatter del agente; sin él, hereda el modelo de la sesión |
+| **AskUserQuestion** | herramienta | herramienta `question` |
+| `isolation: worktree` | parámetro de `Agent` | herramientas de worktree de OpenCode (`worktree_create`, en modo código) o `git worktree add` a mano |
+| `~/.claude/agents/` | carpeta de agentes de usuario | `~/.config/opencode/agents/` (el instalador del repo los convierte: `python instalar.py --opencode`) |
+| memoria `~/.claude/projects/<proyecto>/memory/` | memoria persistente | no hay equivalente automático: guarda las notas en una carpeta propia (p. ej. `~/.config/opencode/memoria/`) y léela al empezar |
+
+El estado de la skill vive en `~/.claude/techo/<slug>/`; en OpenCode usa `~/.config/opencode/techo/<slug>/` (o cualquier carpeta fuera del proyecto) y dilo en el dictamen.
+
 ## Por qué existe (el caso de referencia, calibración)
 
-El cerebro del chat de el proyecto de referencia (un SaaS con chat de IA) era un pipeline cerrado: clasificador de intención
+El cerebro del chat del proyecto de referencia (un SaaS con chat de IA) era un pipeline cerrado: clasificador de intención
 → el modelo extrae parámetros → SQL con filtros → si 0 resultados, relaja
 filtros a ciegas → devuelve UN ganador con informe. Durante meses cada mejora
 fue un parche DENTRO del pipeline (mapas estáticos, modos cosidos a mano,
@@ -44,10 +60,10 @@ diseño; un techo es el diseño cumpliéndose a la perfección y aun así sin
 llegar.** Un bug es una foto; un techo es una serie temporal. Quien mira fotos
 encuentra bugs. Tú miras la historia de los arreglos.
 
-el proyecto de referencia (un SaaS con chat de IA) es un ejemplo de MÉTODO, no una plantilla de diagnóstico. Si el camino
+El caso de referencia es un ejemplo de MÉTODO, no una plantilla de diagnóstico. Si el camino
 que acabas recomendando se parece a "abrir el modelo" o "dale herramientas al
 modelo", el dictamen tiene que escribir en qué se diferencia este objeto de
-el proyecto de referencia (un SaaS con chat de IA) y qué evidencia PROPIA lo sostiene; sin eso, baja a palanca. Subir de
+el caso de referencia y qué evidencia PROPIA lo sostiene; sin eso, baja a palanca. Subir de
 grado una decisión no es un bien en sí: en dinero, permisos, coste y reglas
 legales, el código fijo es el producto.
 
@@ -78,13 +94,13 @@ skill, gana la que hace más difícil emitir un veredicto sin evidencia.
   entrega igual pero el modo baja un escalón (A→B, B→C) y la portada lo dice.
 - **Cero cifras inventadas.** Ni conversiones "típicas", ni tamaños de mercado,
   ni "un 30 % más rápido", ni umbrales puestos a ojo. Lo heredado de memorias o
-  informes viejos se re-mide en la sesión (la memoria de el proyecto de referencia (un SaaS con chat de IA) arrastró "~0
+  informes viejos se re-mide en la sesión (la memoria del caso de referencia arrastró "~0
   clientes" cuando Stripe tenía 15 cobros). Si no se puede medir: `SIN MEDIR`.
   Los costes se derivan de un precedente citado (qué tocó y cuánto llevó un
   cambio parecido, según nota fechada) y van como `INFERIDO`; sin precedente,
   `SIN MEDIR`.
 - **Unidad de coste**: una **sesión** es un bloque de unas 3 horas de trabajo
-  de el usuario sin cambiar de proyecto. Todo coste y todo kill-test se expresa en
+  del usuario sin cambiar de proyecto. Todo coste y todo kill-test se expresa en
   sesiones, para el usuario solo y manteniendo lo demás en paralelo, más €/mes
   recurrentes. Nunca sprints ni "un par de tardes". Siempre con el coste de
   oportunidad: qué pasaría si esas sesiones fueran a vender o a otro proyecto.
@@ -178,7 +194,7 @@ Escribe `contrato.md` con:
    claves necesita (las suyas), coste por ejecución y si se puede sin tocar
    producción. De esto depende si la predicción de la Fase 3 y el kill-test se
    ejecutan o se trazan en seco.
-6. **Presupuesto**: sesiones de el usuario disponibles y €/mes; intocables
+6. **Presupuesto**: sesiones del usuario disponibles y €/mes; intocables
    (producción, Stripe LIVE, claves, lo que ya cobra).
 7. **Frase de falsación pre-registrada**: "Concluiré que NO hay techo si
    <evidencia concreta>". Se copia literal en la portada del dictamen.
@@ -191,7 +207,7 @@ Antes de proponer nada, decide con números dónde está hoy el límite de la
 métrica-rey: en el **código** (el objeto), en el **dato** (cobertura, frescura,
 fuente rota), en **distribución o precio** (nadie llega, nadie paga), en una
 **plataforma de terceros** (políticas de Meta, límites de una API, un scraper
-que un tercero rompe), en las **horas de el usuario** (atención repartida entre
+que un tercero rompe), en las **horas del usuario** (atención repartida entre
 proyectos) o **entre proyectos** (duplicar lo que otro proyecto suyo ya tiene,
 o acoplar dos que deberían ir separados).
 
@@ -200,9 +216,9 @@ conteos reales. Si el cuello está FUERA del objeto pedido, se dice en la
 PRIMERA línea del dictamen y se propone el objeto correcto, pero el análisis
 de techo **no se cierra**: continúa, porque un techo estructural demostrado
 que hoy no aprieta se archiva con disparador (modo A-ARCHIVADO), no se
-entierra. Enterrarlo es exactamente lo que le pasó a el proyecto de referencia (un SaaS con chat de IA) durante meses.
+entierra. Enterrarlo es exactamente lo que le pasó al caso de referencia durante meses.
 
-Si aparecen DOS restricciones reales y acopladas (el proyecto de referencia (un SaaS con chat de IA): dato pobre en
+Si aparecen DOS restricciones reales y acopladas (el caso de referencia: dato pobre en
 Sudamérica Y pipeline cerrado), no te refugies en "instrumentar": nombra las
 dos, di cuál desbloquea a la otra, cuál es reversible y qué parte del síntoma
 explica cada una. Las plantillas del dictamen y de la nota tienen sitio para
@@ -295,7 +311,7 @@ caso sobre el mapa y se etiqueta `INFERIDO`.
   el usuario. Ese es el mayor valor de la skill, no el caso contrario.
 - Si solo lo cierra añadiendo otro caso especial (es el enésimo parche de la
   serie), o no lo cierra: techo confirmado **por construcción**, no por opinión.
-  En el proyecto de referencia (un SaaS con chat de IA) el campeón era la ampliación dirigida por región: exactamente lo que
+  En el caso de referencia el campeón era la ampliación dirigida por región: exactamente lo que
   el usuario construyó, y solo funcionaba metiendo otra lista estática.
 
 El resultado se publica en el dictamen aunque desmonte la tesis.

@@ -31,7 +31,7 @@ línea es `VEREDICTO PROVISIONAL (pasada rápida): MODO <x>` y se omiten 8, 9,
 Condiciones de modo A cumplidas: <lista> · No cumplidas: <lista>.
 Afirmaciones clave MEDIDO/LEÍDO: <n> de <m> (si < mitad: modo rebajado de <x> a <y>).
 Frase de falsación pre-registrada: "<literal del contrato>" → <se cumplió / no se cumplió>.
-Cuello actual (Fase 1): <código | dato | distribución/precio | plataforma | horas de el usuario | entre proyectos>, <dentro/fuera del objeto>
+Cuello actual (Fase 1): <código | dato | distribución/precio | plataforma | horas del usuario | entre proyectos>, <dentro/fuera del objeto>
   [+ <capa 2> acoplada: cuál desbloquea a cuál, cuál es reversible, qué parte del síntoma explica cada una].
 Objetivo declarado: <cifra y fecha, fuente | SIN OBJETIVO>.
 
@@ -98,7 +98,7 @@ para concentrar las sesiones en las palancas).
 
 ## 14. Descartados y por qué
 Una línea por camino o palanca que no sobrevivió: motivo (sin kill-test, sin
-seam, mata < 5 casos, contradice decisión de el usuario, coste > presupuesto…).
+seam, mata < 5 casos, contradice decisión del usuario, coste > presupuesto…).
 
 ## 15. Panel escéptico: desacuerdos y verificación
 Contable: cifras. Verificador: citas tachadas y por qué. Desacuerdos no
@@ -216,7 +216,7 @@ portada ni modo: una por línea con su etiqueta y su ancla>, <evidencia\>,
 <proyecto>
 ```
 
-## Reporte a el usuario en el chat (al cerrar)
+## Reporte al usuario en el chat (al cerrar)
 
 Corto, sin repetir el dictamen:
 
