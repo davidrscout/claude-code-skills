@@ -70,7 +70,8 @@ Comprueba que carga pidiéndole al agente, por ejemplo, «usa la skill techo» o
 Nada de esto depende de Claude ni de código de Anthropic: son servidores MCP, y los usa cualquier agente que hable MCP (OpenCode, Kimi, Codex, Claude Code…).
 
 - **El PC (ratón, teclado, pantalla, ventanas)**: `mcp/pc-control` de este repo, con backend propio en PowerShell para Windows. Instalación en su [README](mcp/pc-control/README.md).
-- **El navegador (Chrome/Chromium)**: [Playwright MCP](https://github.com/microsoft/playwright-mcp), de Microsoft, código abierto. Abre y maneja el navegador (navegar, leer la página, clicar, escribir, capturas). En OpenCode, en `~/.config/opencode/opencode.json`:
+- **El navegador, con la IA dentro de tu Chrome**: [kimi-in-chrome](https://github.com/davidrscout/kimi-in-chrome) (mío, MIT): extensión de Chrome con panel lateral + host nativo en Python. Controla TU Chrome ya abierto (pestañas, clics, lectura de páginas), sin perfil aparte ni otro navegador, con Kimi Code CLI o con cualquier API compatible con OpenAI. Implementación independiente, sin código de Anthropic. Instalación en su README.
+- **El navegador por MCP (alternativa)**: [Playwright MCP](https://github.com/microsoft/playwright-mcp), de Microsoft, código abierto. Abre y maneja el navegador (navegar, leer la página, clicar, escribir, capturas). En OpenCode, en `~/.config/opencode/opencode.json`:
 
 ```json
 {
@@ -148,6 +149,7 @@ Cómo añadirlos (detalle en cada README):
 
 ## Otros repos míos relacionados
 
+- [kimi-in-chrome](https://github.com/davidrscout/kimi-in-chrome): controla tu Chrome con tu propia IA (extensión + host nativo), MIT.
 - [depurar-skill](https://github.com/davidrscout/depurar-skill): la skill `depurar` con instaladores propios (`install.sh` / `install.ps1`).
 - [clips-automaticos-skill](https://github.com/davidrscout/clips-automaticos-skill): clips verticales automáticos y subida a TikTok y YouTube Shorts, multi-cuenta.
 - [claude-multicuenta](https://github.com/davidrscout/claude-multicuenta): varias cuentas de Claude Code en el mismo PC con Windows, compartiendo memoria, skills y agentes (`centro-ia` lee su `cuentas.json` si existe).
