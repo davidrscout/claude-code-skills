@@ -26,7 +26,7 @@ sys.stdout.reconfigure(encoding="utf-8", errors="replace")
 # Patrones genéricos de datos personales (valen para cualquier autor).
 PERSONALES = [
     # direcciones de correo reales (se permiten las de ejemplo y las noreply)
-    r"[A-Za-z0-9._%+-]+@(?!(?:[a-z0-9-]+\.)*(?:example|ejemplo)\.|users\.noreply\.github\.com|anthropic\.com|github\.com)"
+    r"[A-Za-z0-9._%+-]+@(?!(?:[a-z0-9-]+\.)*(?:example|ejemplo)\.|(?:[a-z0-9-]+\.)*(?:test|invalid)\b|users\.noreply\.github\.com|anthropic\.com|github\.com)"
     r"[A-Za-z0-9-]+\.[A-Za-z0-9.-]*[a-z]{2,}",
     # carpeta personal con un nombre de usuario concreto
     r"[A-Za-z]:[\\/]+Users[\\/]+(?![<%$.]|Public\b|Default\b|usuario\b|tu-usuario\b)[A-Za-z0-9_-][A-Za-z0-9._-]*",
